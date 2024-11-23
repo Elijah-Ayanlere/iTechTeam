@@ -6,6 +6,22 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>iTech Team</title>
   <link rel="icon" href="image/submarklogo.jpg">
+  <style>
+    .star-rating {
+      display: flex;
+      cursor: pointer;
+    }
+    .star {
+      width: 25px;
+      height: 25px;
+      background-color: #d3d3d3;
+      margin-right: 5px;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+    .star.filled {
+      background-color: #f39c12;
+    }
+  </style>
 </head>
 <body class="antialiased bg-gray-100">
 
@@ -13,9 +29,11 @@
   <nav class="bg-sky-900 text-white static">
     <div class="container mx-auto flex items-center justify-between py-4 px-6">
       <!-- Logo Section -->
-      <div class="flex items-center">
-        <img src="image/itechteam logo.png" alt="iTech Team Logo" style="width: 30%;">
-      </div>
+      <a href="index.html">
+        <div class="flex items-center">
+          <img src="image/itechteam logo.png" alt="iTech Team Logo" style="width: 30%;">
+        </div>
+      </a>
 
       <!-- Navigation Links (Desktop) -->
       <ul class="hidden md:flex items-center space-x-6">
@@ -44,7 +62,7 @@
         </li>
         <li class="hidden additional-nav-items font-bold relative group">
             <a href="#" class="block px-4 py-2">
-                Measured Services
+              Fast Services
             </a>
             <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-56 py-2 text-white">
                 <li><a href="2weeks_service.html" class="block px-4 py-2">2-weeks services or less</a></li>
@@ -95,7 +113,7 @@
                 <a href="manage_business.html" class="block px-4 py-2">Manage Your Business</a>
             </li>
             <li class="hidden additional-nav-items relative group">
-                <a href="#" class="block px-4 py-2">Measured Services</a>
+                <a href="#" class="block px-4 py-2">Fast Services</a>
                 <ul class="hidden absolute left-0 top-full mt-2 w-56 bg-sky-900 shadow-lg group-hover:block z-10">
                     <li><a href="2weeks_service.html" class="block px-4 py-2">2-weeks services or less</a></li>
                     <li><a href="1month_service.html" class="block px-4 py-2">1 month service or less</a></li>
@@ -110,149 +128,43 @@
     </div>    
   </nav>
 
-  <div class="bg-gray-100 py-16">
-    <div class="container mx-auto px-4">
-      <!-- Title Section -->
-      <div class="flex justify-center items-center mt-10">
-        <h1 class="text-2xl lg:text-3xl lg:text-center font-bold text-sky-900">Testimonials of our customers</h1>
-      </div>
-  
-      <!-- Testimonial Section -->
-      <div class="flex flex-wrap mt-10 gap-10 justify-center">
-        <!-- Testimonial 1 -->
-        <div class="rounded-lg border border-gray-300 p-10 w-full lg:w-1/3 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col cursor-pointer">
-          <div class="rounded-full overflow-hidden w-24 h-24 mx-auto mb-4">
-            <img src="image/Samitex.png" alt="Profile Picture" class="w-full h-full object-cover">
-          </div>
-          <p class="text-black text-lg h-auto text-center flex-grow">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ipsa laboriosam quis blanditiis enim itaque cumque vero autem cum quidem voluptate perspiciatis, fugit voluptas qui maxime necessitatibus veniam recusandae id iste odio asperiores facere pariatur eius. Accusamus ad modi laborum omnis deleniti officiis eos doloremque, ducimus excepturi voluptatem minus at!
-          </p>
-          <div class="flex justify-center mt-4">
-            <p class="font-bold text-gray-800">- John Doe</p>
-          </div>
-        </div>
-  
-        <!-- Testimonial 2 -->
-        <div class="rounded-lg border border-gray-300 p-10 w-full lg:w-1/3 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col cursor-pointer">
-          <div class="rounded-full overflow-hidden w-24 h-24 mx-auto mb-4">
-            <img src="image/Samitex.png" alt="Profile Picture" class="w-full h-full object-cover">
-          </div>
-          <p class="text-black text-lg h-auto text-center flex-grow">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate totam dolorem magni molestias adipisci reiciendis id commodi aliquam odit eaque asperiores porro accusamus, nesciunt dolore dolor delectus. Vero dolores iure sit, qui, illum, magni aut enim nulla saepe officia accusamus nobis animi quas temporibus fugit deleniti eveniet ut! Libero, provident.
-          </p>
-          <div class="flex justify-center mt-4">
-            <p class="font-bold text-gray-800">- Jane Smith</p>
-          </div>
-        </div>
-  
-        <!-- Testimonial 3 -->
-        <div class="rounded-lg border border-gray-300 p-10 w-full lg:w-1/3 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col cursor-pointer">
-          <div class="rounded-full overflow-hidden w-24 h-24 mx-auto mb-4">
-            <img src="image/Samitex.png" alt="Profile Picture" class="w-full h-full object-cover">
-          </div>
-          <p class="text-black text-lg h-auto text-center flex-grow">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate totam dolorem magni molestias adipisci reiciendis id commodi aliquam odit eaque asperiores porro accusamus, nesciunt dolore dolor delectus. Vero dolores iure sit, qui, illum, magni aut enim nulla saepe officia accusamus nobis animi quas temporibus fugit deleniti eveniet ut! Libero, provident.
-          </p>
-          <div class="flex justify-center mt-4">
-            <p class="font-bold text-gray-800">- Jane Smith</p>
-          </div>
-        </div>
-  
-        <!-- Testimonial 4 -->
-        <div class="rounded-lg border border-gray-300 p-10 w-full lg:w-1/3 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col cursor-pointer">
-          <div class="rounded-full overflow-hidden w-24 h-24 mx-auto mb-4">
-            <img src="image/Samitex.png" alt="Profile Picture" class="w-full h-full object-cover">
-          </div>
-          <p class="text-black text-lg h-auto text-center flex-grow">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate totam dolorem magni molestias adipisci reiciendis id commodi aliquam odit eaque asperiores porro accusamus, nesciunt dolore dolor delectus. Vero dolores iure sit, qui, illum, magni aut enim nulla saepe officia accusamus nobis animi quas temporibus fugit deleniti eveniet ut! Libero, provident.
-          </p>
-          <div class="flex justify-center mt-4">
-            <p class="font-bold text-gray-800">- Jane Smith</p>
-          </div>
-        </div>
-  
-        <!-- Testimonial 5 -->
-        <div class="rounded-lg border border-gray-300 p-10 w-full lg:w-1/3 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col cursor-pointer">
-          <div class="rounded-full overflow-hidden w-24 h-24 mx-auto mb-4">
-            <img src="image/Samitex.png" alt="Profile Picture" class="w-full h-full object-cover">
-          </div>
-          <p class="text-black text-lg h-auto text-center flex-grow">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate totam dolorem magni molestias adipisci reiciendis id commodi aliquam odit eaque asperiores porro accusamus, nesciunt dolore dolor delectus. Vero dolores iure sit, qui, illum, magni aut enim nulla saepe officia accusamus nobis animi quas temporibus fugit deleniti eveniet ut! Libero, provident.
-          </p>
-          <div class="flex justify-center mt-4">
-            <p class="font-bold text-gray-800">- Jane Smith</p>
-          </div>
-        </div>
-  
-        <!-- Testimonial 6 -->
-        <div class="rounded-lg border border-gray-300 p-10 w-full lg:w-1/3 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col cursor-pointer">
-          <div class="rounded-full overflow-hidden w-24 h-24 mx-auto mb-4">
-            <img src="image/Samitex.png" alt="Profile Picture" class="w-full h-full object-cover">
-          </div>
-          <p class="text-black text-lg h-auto text-center flex-grow">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate totam dolorem magni molestias adipisci reiciendis id commodi aliquam odit eaque asperiores porro accusamus, nesciunt dolore dolor delectus. Vero dolores iure sit, qui, illum, magni aut enim nulla saepe officia accusamus nobis animi quas temporibus fugit deleniti eveniet ut! Libero, provident.
-          </p>
-          <div class="flex justify-center mt-4">
-            <p class="font-bold text-gray-800">- Jane Smith</p>
-          </div>
-        </div>
+  <div class="container mx-auto px-4">
+    <h1 class="text-2xl mt-10 lg:text-3xl text-center font-bold text-sky-900">Customer Testimonials</h1>
 
-        <!-- Testimonial 7 -->
-        <div class="rounded-lg border border-gray-300 p-10 w-full lg:w-1/3 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col cursor-pointer">
-            <div class="rounded-full overflow-hidden w-24 h-24 mx-auto mb-4">
-              <img src="image/Samitex.png" alt="Profile Picture" class="w-full h-full object-cover">
-            </div>
-            <p class="text-black text-lg h-auto text-center flex-grow">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate totam dolorem magni molestias adipisci reiciendis id commodi aliquam odit eaque asperiores porro accusamus, nesciunt dolore dolor delectus. Vero dolores iure sit, qui, illum, magni aut enim nulla saepe officia accusamus nobis animi quas temporibus fugit deleniti eveniet ut! Libero, provident.
-            </p>
-            <div class="flex justify-center mt-4">
-              <p class="font-bold text-gray-800">- Jane Smith</p>
-            </div>
-        </div>
+    <!-- Display Testimonials -->
+    <div id="testimonialsContainer" class="mt-10 flex flex-wrap gap-6 justify-center">
+        <!-- Testimonials will be dynamically inserted here -->
+    </div>
 
-         <!-- Testimonial 8 -->
-         <div class="rounded-lg border border-gray-300 p-10 w-full lg:w-1/3 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col cursor-pointer">
-            <div class="rounded-full overflow-hidden w-24 h-24 mx-auto mb-4">
-              <img src="image/Samitex.png" alt="Profile Picture" class="w-full h-full object-cover">
-            </div>
-            <p class="text-black text-lg h-auto text-center flex-grow">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate totam dolorem magni molestias adipisci reiciendis id commodi aliquam odit eaque asperiores porro accusamus, nesciunt dolore dolor delectus. Vero dolores iure sit, qui, illum, magni aut enim nulla saepe officia accusamus nobis animi quas temporibus fugit deleniti eveniet ut! Libero, provident.
-            </p>
-            <div class="flex justify-center mt-4">
-              <p class="font-bold text-gray-800">- Jane Smith</p>
-            </div>
-        </div>
+    <div id="noTestimonyMessage" class="text-center text-gray-500 mt-10 hidden">
+        <p>No reviews/testimony</p>
+    </div>
 
-         <!-- Testimonial 9 -->
-         <div class="rounded-lg border border-gray-300 p-10 w-full lg:w-1/3 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col cursor-pointer">
-            <div class="rounded-full overflow-hidden w-24 h-24 mx-auto mb-4">
-              <img src="image/Samitex.png" alt="Profile Picture" class="w-full h-full object-cover">
-            </div>
-            <p class="text-black text-lg h-auto text-center flex-grow">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate totam dolorem magni molestias adipisci reiciendis id commodi aliquam odit eaque asperiores porro accusamus, nesciunt dolore dolor delectus. Vero dolores iure sit, qui, illum, magni aut enim nulla saepe officia accusamus nobis animi quas temporibus fugit deleniti eveniet ut! Libero, provident.
-            </p>
-            <div class="flex justify-center mt-4">
-              <p class="font-bold text-gray-800">- Jane Smith</p>
-            </div>
-        </div>
+    <h1 class="text-2xl mt-24 lg:text-3xl text-center font-bold text-sky-900">Submit your review/testimony!</h1>
+    <!-- Testimonial Form -->
+    <div class="flex justify-center mt-10">
+        <input id="userName" type="text" class="w-full lg:w-1/2 border-b border-gray-400 bg-gray-100 focus:outline-none focus:border-blue-800 p-2" placeholder="Enter your name" />
+    </div>
 
-        <!-- Testimonial 10 -->
-        <div class="rounded-lg border border-gray-300 p-10 w-full lg:w-1/3 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col cursor-pointer">
-            <div class="rounded-full overflow-hidden w-24 h-24 mx-auto mb-4">
-              <img src="image/Samitex.png" alt="Profile Picture" class="w-full h-full object-cover">
-            </div>
-            <p class="text-black text-lg h-auto text-center flex-grow">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate totam dolorem magni molestias adipisci reiciendis id commodi aliquam odit eaque asperiores porro accusamus, nesciunt dolore dolor delectus. Vero dolores iure sit, qui, illum, magni aut enim nulla saepe officia accusamus nobis animi quas temporibus fugit deleniti eveniet ut! Libero, provident.
-            </p>
-            <div class="flex justify-center mt-4">
-              <p class="font-bold text-gray-800">- Jane Smith</p>
-            </div>
-          </div>
+    <div class="flex justify-center mt-6">
+        <textarea id="testimonialText" class="w-full lg:w-1/2 p-4 border border-gray-400 bg-gray-100 rounded focus:outline-none focus:border-blue-800" placeholder="Write your testimonial here..."></textarea>
+    </div>
+
+    <div class="flex justify-center mt-8">
+        <div id="starRating" class="star-rating flex">
+            <div class="star cursor-pointer" data-value="1">&#9733;</div>
+            <div class="star cursor-pointer" data-value="2">&#9733;</div>
+            <div class="star cursor-pointer" data-value="3">&#9733;</div>
+            <div class="star cursor-pointer" data-value="4">&#9733;</div>
+            <div class="star cursor-pointer" data-value="5">&#9733;</div>
         </div>
     </div>
-  </div>  
 
-
+    <div class="flex justify-center mt-4">
+        <button id="submitTestimonial" class="bg-sky-900 h-12 w-72 text-white px-6 py-2 rounded-xl text-lg mt-6 font-bold mb-12">SUBMIT</button>
+    </div>
+</div>
+  
   <section class="relative bg-cover bg-center py-12 text-white overflow-x-hidden" style="background-image: url('image/world.png');">
     <!-- Overlay -->
     <div class="absolute inset-0 bg-sky-900 opacity-40"></div>
@@ -262,9 +174,11 @@
       <!-- Logo and Newsletter Section -->
       <div>
         <!-- Logo -->
-        <div class="mb-8">
-          <img src="image/itechteam logo.png" alt="Logo" class="h-64">
-        </div>
+        <a href="index.html">
+          <div class="mb-8">
+            <img src="image/itechteam logo.png" alt="Logo" class="h-64">
+          </div>
+        </a>
         <!-- Newsletter -->
         <h3 class="text-2xl sm:text-xl md:text-2xl lg:text-2xl font-bold mb-4">Subscribe to our newsletter</h3>
         <form class="space-y-4">
@@ -312,7 +226,7 @@
   
       <!-- Fast Services Section -->
       <div class="mt-8 md:mt-32 md:ml-16 lg:ml-32">
-        <h3 class="text-2xl sm:text-xl md:text-3xl font-bold mb-6 whitespace-nowrap">Measured Services</h3>
+        <h3 class="text-2xl sm:text-xl md:text-3xl font-bold mb-6 whitespace-nowrap">Fast Services</h3>
         <ul class="space-y-2 md:space-y-4 text-xl md:text-2xl lg:text-2xl">
           <li><a href="1month_service.html" class="hover:underline">1 Month services or less</a></li>
           <li><a href="2weeks_service.html" class="hover:underline">2 Weeks services or less</a></li>
@@ -443,6 +357,161 @@
             button.textContent = "Show More";
         }
     });
+
+    // Store the selected star rating
+      let selectedStarRating = 0;
+
+      // Handle the star selection
+      document.querySelectorAll('.star').forEach(star => {
+          star.addEventListener('click', function() {
+              selectedStarRating = this.getAttribute('data-value');
+              // Highlight the stars based on selection
+              document.querySelectorAll('.star').forEach(star => {
+                  if (star.getAttribute('data-value') <= selectedStarRating) {
+                      star.classList.add('text-yellow-500');
+                      star.classList.remove('text-gray-300');
+                  } else {
+                      star.classList.add('text-gray-300');
+                      star.classList.remove('text-yellow-500');
+                  }
+              });
+          });
+      });
+
+      // Handle the submission of a testimonial
+      document.getElementById("submitTestimonial").addEventListener("click", function() {
+          const userName = document.getElementById("userName").value;
+          const testimonialText = document.getElementById("testimonialText").value;
+
+          // Check if inputs are not empty and star rating is selected
+          if (!userName || !testimonialText || selectedStarRating === 0) {
+              alert("Please fill in all fields, including a star rating.");
+              return;
+          }
+
+          // Create a testimony object with submission time and star rating
+          const testimony = {
+              user: userName,
+              content: testimonialText,
+              rating: selectedStarRating,
+              createdAt: new Date().toISOString(), // Store the time in ISO format
+          };
+
+          // Get existing testimonials from localStorage
+          const storedTestimonials = JSON.parse(localStorage.getItem("testimonials")) || [];
+
+          // Add the new testimony to the array
+          storedTestimonials.push(testimony);
+
+          // Save the updated array back to localStorage
+          localStorage.setItem("testimonials", JSON.stringify(storedTestimonials));
+
+          // Render the new testimony
+          renderTestimonies();
+
+          // Clear the form inputs
+          document.getElementById("userName").value = "";
+          document.getElementById("testimonialText").value = "";
+          selectedStarRating = 0;
+          // Reset the star rating visual
+          document.querySelectorAll('.star').forEach(star => star.classList.remove('text-yellow-500'));
+          document.querySelectorAll('.star').forEach(star => star.classList.add('text-gray-300'));
+      });
+
+      // Function to render all testimonials
+      function renderTestimonies() {
+          const testimonialsContainer = document.getElementById("testimonialsContainer");
+          const noTestimonyMessage = document.getElementById("noTestimonyMessage");
+          testimonialsContainer.innerHTML = ""; // Clear current testimonies
+
+          // Get testimonials from localStorage
+          const storedTestimonials = JSON.parse(localStorage.getItem("testimonials")) || [];
+
+          if (storedTestimonials.length === 0) {
+              // If no testimonials, show the "No review/testimony yet" message
+              noTestimonyMessage.classList.remove("hidden");
+          } else {
+              // Hide the "No reviews" message if there are testimonials
+              noTestimonyMessage.classList.add("hidden");
+
+              // Loop through testimonials and create HTML for each
+              storedTestimonials.forEach((testimony, index) => {
+                  const testimonyElement = document.createElement("div");
+                  testimonyElement.classList.add("rounded-lg", "border", "border-gray-300", "p-10", "w-full", "lg:w-1/3", "shadow-lg", "hover:shadow-2xl", "transition-all", "duration-300", "flex", "flex-col", "cursor-pointer");
+
+                  // Add testimonial content to the element
+                  testimonyElement.innerHTML = `
+                      <div class="rounded-full overflow-hidden w-24 h-24 mx-auto mb-4"></div>
+                      <p class="text-black text-lg h-auto text-center flex-grow" id="testimony-${index}">
+                          ${testimony.content}
+                      </p>
+                      <div class="flex justify-center mt-4">
+                          <p class="font-bold text-gray-800">- ${testimony.user}</p>
+                      </div>
+                      <div class="flex justify-center mt-4">
+                          <div class="flex text-yellow-500">
+                              ${getStarRating(testimony.rating)}
+                          </div>
+                      </div>
+                      <button class="delete-btn mt-4 text-red-500" onclick="deleteTestimony(${index}, '${testimony.user}')">Delete</button>
+                  `;
+                  testimonialsContainer.appendChild(testimonyElement);
+              });
+          }
+      }
+
+      // Function to return star rating as HTML
+      function getStarRating(rating) {
+          let starsHtml = '';
+          for (let i = 1; i <= 5; i++) {
+              starsHtml += i <= rating ? '&#9733;' : '&#9734;';
+          }
+          return starsHtml;
+      }
+
+      // Handle the delete functionality with admin check
+      function deleteTestimony(testimonyIndex, user) {
+        const currentUser = document.getElementById("userName").value; // Get current user name dynamically
+
+        if (currentUser === user) {
+            // If it's the user's own testimony, allow immediate deletion
+            const confirmation = confirm('Are you sure you want to delete your testimony?');
+
+            if (confirmation) {
+                deleteTestimonyFromLocalStorage(testimonyIndex);
+                alert('Testimony deleted successfully!');
+            }
+        } else {
+            // Admin check for other testimonies
+            const isAdmin = confirm('Are you an admin?');
+
+            if (isAdmin) {
+                const secretAnswer = prompt('What is the passcode?');
+                
+                // Check if the answer is correct
+                if (secretAnswer && secretAnswer.toLowerCase() === '66554462') {
+                    // Admin is allowed to delete
+                    deleteTestimonyFromLocalStorage(testimonyIndex);
+                    alert('Testimony deleted successfully!');
+                } else {
+                    alert('Incorrect answer. You are not authorized to delete this review.');
+                }
+            } else {
+                alert('You are not authorized to delete this review.');
+            }
+        }
+      }
+
+      // Helper function to delete testimony from localStorage
+      function deleteTestimonyFromLocalStorage(testimonyIndex) {
+          const storedTestimonials = JSON.parse(localStorage.getItem("testimonials")) || [];
+          storedTestimonials.splice(testimonyIndex, 1); // Remove testimony from array
+          localStorage.setItem("testimonials", JSON.stringify(storedTestimonials)); // Save updated array to localStorage
+          renderTestimonies(); // Re-render the testimonies
+      }
+
+      // Initial render of testimonials from localStorage
+      renderTestimonies();
   </script>
 
 </body>

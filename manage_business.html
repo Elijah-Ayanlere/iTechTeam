@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>iTech Team</title>
+  <link rel="icon" href="image/submarklogo.jpg">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="bg-sky-900 text-white static">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      <!-- Logo Section -->
+      <div class="flex items-center">
+        <img src="image/itechteam logo.png" alt="iTech Team Logo" style="width: 30%;">
+      </div>
+
+      <!-- Navigation Links (Desktop) -->
+      <ul class="hidden md:flex items-center space-x-6">
+        <!-- Regular menu items -->
+        <li><a href="index.html" class="hover:text-gray-300 font-bold">Home</a></li>
+        <li><a href="services.html" class="hover:text-gray-300 font-bold hide-on-show-more-desktop">Services</a></li>
+        <li><a href="about.html" class="hover:text-gray-300 font-bold hide-on-show-more-desktop">About Us</a></li>
+        <li><a href="team.html" class="hover:text-gray-300 font-bold hide-on-show-more-desktop">Meet the Teams</a></li>
+        <li><a href="mindset.html" class="hover:text-gray-300 font-bold">Mindset</a></li>
+    
+        <!-- Dropdown -->
+        <li class="relative group">
+            <a href="#" class="hover:text-gray-300 font-bold">Start Your Business</a>
+            <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-48 py-2 text-white">
+                <li><a href="start_a_business.html" class="block px-4 py-2">Startup Roadmap</a></li>
+                <li><a href="solution.html" class="block px-4 py-2">Itechteam Solution</a></li>
+                <li><a href="start_your_business.html" class="block px-4 py-2">Start Your Business</a></li>
+                <li><a href="start_your_company.html" class="block px-4 py-2">Start Your Company</a></li>
+                <li><a class="relative group px-4 py-2 font-bold" href="#" id="showAdditionalNavDesktop">Show More</a></li>
+            </ul>
+        </li>
+    
+        <!-- Additional items initially hidden -->
+        <li class="hidden additional-nav-items font-bold">
+            <a href="manage_business.html" class="block px-4 py-2">Manage Your Business</a>
+        </li>
+        <li class="hidden additional-nav-items font-bold relative group">
+            <a href="#" class="block px-4 py-2">
+                Measured Services
+            </a>
+            <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-56 py-2 text-white">
+                <li><a href="2weeks_service.html" class="block px-4 py-2">2-weeks services or less</a></li>
+                <li><a href="1month_service.html" class="block px-4 py-2">1 month service or less</a></li>
+                <li><a href="2month_service.html" class="block px-4 py-2">2 Months Services or More</a></li>
+            </ul>
+        </li>
+        <li class="hidden additional-nav-items">
+            <a href="#" class="block px-4 py-2 font-bold">Products</a>
+        </li>
+        <li><a href="#" class="hover:text-gray-300 font-bold">Contact Us</a></li>
+    </ul>      
+
+      <!-- Hamburger Menu (Mobile) -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none text-white">
+          <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-sky-900">
+        <ul class="flex flex-col items-left ml-5 space-y-4 py-4">
+            <!-- Regular menu items -->
+            <li><a href="index.html" class="hover:text-gray-300 font-bold">Home</a></li>
+            <li><a href="services.html" class="hover:text-gray-300 font-bold">Services</a></li>
+            <li><a href="about.html" class="hover:text-gray-300 font-bold">About Us</a></li>
+            <li><a href="team.html" class="hover:text-gray-300 font-bold">Meet the Teams</a></li>
+            <li><a href="mindset.html" class="hover:text-gray-300 font-bold">Mindset</a></li>
+    
+            <!-- Dropdown -->
+            <li class="relative">
+                <a href="#" class="hover:text-gray-300 font-bold" id="startYourBusinessMobile">Start Your Business</a>
+                <ul id="startYourBusinessDropdownMobile" class="flex flex-col bg-sky-900 w-48 py-2 text-white hidden">
+                    <li><a href="start_a_business.html" class="block px-4 py-2 hide-on-show-more">Startup Roadmap</a></li>
+                    <li><a href="solution.html" class="block px-4 py-2 hide-on-show-more">Itechteam Solution</a></li>
+                    <li><a href="start_your_business.html" class="block px-4 py-2 hide-on-show-more">Start Your Business</a></li>
+                    <li><a href="start_your_company.html" class="block px-4 py-2 hide-on-show-more">Start Your Company</a></li>
+                    <li><a href="#" class="px-4 py-2 font-bold" id="showAdditionalNavMobile">Show More</a></li>
+                </ul>
+            </li>            
+    
+            <!-- Additional items initially hidden -->
+            <li class="hidden additional-nav-items">
+                <a href="manage_business.html" class="block px-4 py-2">Manage Your Business</a>
+            </li>
+            <li class="hidden additional-nav-items relative group">
+                <a href="#" class="block px-4 py-2">Measured Services</a>
+                <ul class="hidden absolute left-0 top-full mt-2 w-56 bg-sky-900 shadow-lg group-hover:block z-10">
+                    <li><a href="2weeks_service.html" class="block px-4 py-2">2-weeks services or less</a></li>
+                    <li><a href="1month_service.html" class="block px-4 py-2">1 month service or less</a></li>
+                    <li><a href="2month_service.html" class="block px-4 py-2">2 Months Services or More</a></li>
+                </ul>
+            </li>
+            <li class="hidden additional-nav-items">
+                <a href="#" class="block px-4 py-2">Products</a>
+            </li>
+            <li><a href="#" class="hover:text-gray-300 font-bold">Contact Us</a></li>
+        </ul>
+    </div>    
+  </nav>
+
+    <div class="text-center py-16">
+        <h1 class="text-3xl lg:text-4xl font-bold text-gray-900">Manage Your Business With Our Software</h1>
+        <p class="mt-4 text-lg text-black font-semibold text-center max-w-lg md:max-w-xl lg:max-w-2xl mx-auto">
+            Our software has been built up with lots of features that can help manage your business, measure analytics, measure sales, Inventory Management, Order Management, Customer Relationship Management, Social Media Management and more
+        </p>         
+    </div>
+    <div class="bg-gray-100 rounded-lg shadow-lg mx-auto p-8 max-w-6xl mb-12">
+        <p class="text-center text-black font-semibold text-lg mb-8">
+            These are iTechTeam processes to assist clients in managing their businesses. This includes product support designed to help clients with business operations and finances.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-200 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Technology Integration</h2>
+                <p class="text-black text-center">
+                    iTechTeam continues to leverage technology to streamline business processes, enhance efficiency, and improve productivity. Our team assists in integrating the client's business operations with our software, providing seamless access to essential tools and features to help clients manage their day-to-day business activities seamlessly.
+                </p>
+            </div>
+            <div class="bg-gray-200 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Training Support</h2>
+                <p class="text-black text-center">
+                    We offer comprehensive training sessions and ongoing support to ensure clients are proficient in using our software effectively. Our product support team provides resources, tutorials, and personalized assistance to address any questions or concerns.
+                </p>
+            </div>
+            <div class="bg-gray-200 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Performance Monitoring</h2>
+                <p class="text-black text-center">
+                    Through our software, clients can monitor key performance indicators (KPIs), track business performance, and gain valuable insights into their operations. Our data analytics tools enable clients to make informed decisions and optimize their business strategies.
+                </p>
+            </div>
+            <div class="bg-gray-200 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Continous Improvement</h2>
+                <p class="text-black text-center">
+                    iTechTeam collaborates with clients to gather feedback and identify areas for improvement in our software. We regularly update and enhance the product based on client needs and market trends, ensuring it remains relevant and valuable to their business.
+                </p>
+            </div>
+            <div class="bg-gray-200 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Strategic Guidance</h2>
+                <p class="text-black text-center">
+                    Our team provides strategic guidance and consultation to help clients effectively utilize our web app to achieve their business objectives. We offer insights, recommendations, and best practices for maximizing the benefits of the product and driving business growth
+                </p>
+            </div>
+
+            <div class="bg-gray-200 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Expansion and Scaling</h2>
+                <p class="text-black text-center">
+                    Our team provides strategic guidance and consultation to help clients effectively utilize our web app to achieve their business objectives. We offer insights, recommendations, and best practices for maximizing the benefits of the product and driving business growth
+                </p>
+            </div>
+
+            <div class="bg-gray-200 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Financial Management</h2>
+                <p class="text-black text-center">
+                    The software includes comprehensive work management tools to help clients organize tasks, track progress, and manage projects effectively. Clients can assign tasks, set deadlines, and monitor workloads to ensure projects are completed on time and within budget.
+                </p>
+            </div>
+
+            <div class="bg-gray-200 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Work Management</h2>
+                <p class="text-black text-center">
+                    As clients' businesses grow, our software provides scalability solutions to support their evolving needs. Clients can easily add new features, users, or integrations as their business expands, ensuring they can scale their operations effectively.
+                </p>
+            </div>
+
+            <div class="bg-gray-200 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Staff Management</h2>
+                <p class="text-black text-center">
+                    For clients who haven't yet hired staff, our software provides tools for managing future staffing needs. Clients can create staffing plans, define roles and responsibilities, and track recruitment processes to ensure they have the right team in place when needed.
+                </p>
+            </div>
+
+            <div class="bg-gray-200 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Subscription Management</h2>
+                <p class="text-black text-center">
+                    Clients can easily manage their subscriptions with iTechTeam through the software. They can view subscription details, track payment schedules, and manage renewals to ensure uninterrupted access to iTechTeam services
+                </p>
+            </div>
+        </div>
+    </div>    
+
+     <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 mt-8 items-center justify-center mb-12">
+        <a href="#">
+            <button class="bg-red-500 h-12 w-60 text-white px-6 py-2 rounded-xl font-bold">Try Demo</button>
+        </a>
+        <a href="subscription.html">
+            <button class="bg-sky-900 h-12 w-60 text-white px-6 py-2 rounded-xl font-bold">Subscribe Now</button>
+        </a>
+    </div>  
+
+
+  <section class="relative bg-cover bg-center py-12 text-white overflow-x-hidden" style="background-image: url('image/world.png');">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-sky-900 opacity-40"></div>
+    
+    <!-- Content -->
+    <div class="relative container mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Logo and Newsletter Section -->
+      <div>
+        <!-- Logo -->
+        <div class="mb-8">
+          <img src="image/itechteam logo.png" alt="Logo" class="h-64">
+        </div>
+        <!-- Newsletter -->
+        <h3 class="text-2xl sm:text-xl md:text-2xl lg:text-2xl font-bold mb-4">Subscribe to our newsletter</h3>
+        <form class="space-y-4">
+          <!-- Input Field -->
+          <input
+            type="email"
+            placeholder="yourname@email.com"
+            class="w-full px-4 py-2 rounded-md text-black focus:outline-none"
+          >
+          <!-- Button -->
+          <button
+            type="submit"
+            class="w-full bg-sky-900 px-6 py-3 rounded-md shadow-md text-center font-bold hover:bg-sky-800 transition duration-300"
+          >
+            Subscribe
+          </button>
+        </form>
+        <!-- Social Media Icons -->
+        <div class="flex gap-4 mt-8">
+          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+            <img src="image/facebook logo.png" alt="Facebook" class="h-6 w-6">
+          </a>
+          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+            <img src="image/instagram logo.png" alt="Instagram" class="h-6 w-6">
+          </a>
+          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+            <img src="image/twitter logo.png" alt="Twitter" class="h-6 w-6">
+          </a>
+        </div>
+      </div>
+  
+      <!-- Quick Links Section -->
+      <div class="mt-8 md:mt-32 md:ml-24 lg:ml-36">
+        <h3 class="text-2xl sm:text-xl md:text-3xl font-bold mb-6 whitespace-nowrap">Quick Links</h3>
+        <ul class="space-y-2 md:space-y-4 text-xl md:text-2xl lg:text-2xl">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="services.html" class="hover:underline">Service</a></li>
+          <li><a href="about.html" class="hover:underline">About Us</a></li>
+          <li><a href="team.html" class="hover:underline">Meet the Team</a></li>
+          <li><a href="mindset.html" class="hover:underline">Mindset</a></li>
+          <li><a href="start_a_business.html" class="hover:underline">Start a Business</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Fast Services Section -->
+      <div class="mt-8 md:mt-32 md:ml-16 lg:ml-32">
+        <h3 class="text-2xl sm:text-xl md:text-3xl font-bold mb-6 whitespace-nowrap">Measured Services</h3>
+        <ul class="space-y-2 md:space-y-4 text-xl md:text-2xl lg:text-2xl">
+          <li><a href="1month_service.html" class="hover:underline">1 Month services or less</a></li>
+          <li><a href="2weeks_service.html" class="hover:underline">2 Weeks services or less</a></li>
+          <li><a href="2month_service.html" class="hover:underline">2 Months services or more</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- JavaScript -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    function toggleCheckbox(id) {
+        const checkbox = document.getElementById(id);
+        const circle = checkbox.querySelector('circle');
+
+        if (checkbox.classList.contains('checked')) {
+            // Uncheck
+            checkbox.classList.remove('checked');
+            circle.classList.remove('fill-sky-900'); // Remove the filled background
+            circle.classList.add('fill-white'); // Add the white background
+        } else {
+            // Check
+            checkbox.classList.add('checked');
+            circle.classList.remove('fill-white'); // Remove the white background
+            circle.classList.add('fill-sky-900'); // Add the filled background
+        }
+    }
+
+    // Function for desktop "Show More" button
+    document.getElementById('showAdditionalNavDesktop').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Button for toggling Show More / Show Less
+        const button = event.target;
+        const isShowingMore = button.textContent.trim() === "Show More";
+
+        // Regular menu items to hide
+        const desktopItemsToHide = document.querySelectorAll('.hide-on-show-more-desktop');
+        const additionalNavItemsDesktop = document.querySelectorAll('.additional-nav-items');
+
+        if (isShowingMore) {
+            // Hide regular menu items
+            desktopItemsToHide.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Show additional items
+            additionalNavItemsDesktop.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Update button text to "Show Less"
+            button.textContent = "Show Less";
+        } else {
+            // Restore the regular menu items
+            desktopItemsToHide.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Hide additional items
+            additionalNavItemsDesktop.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Update button text back to "Show More"
+            button.textContent = "Show More";
+        }
+    });
+
+
+   // Toggle "Start Your Business" dropdown on mobile
+    document.getElementById('startYourBusinessMobile').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Find the dropdown under "Start Your Business"
+        const dropdown = document.getElementById('startYourBusinessDropdownMobile');
+
+        // Toggle dropdown visibility
+        dropdown.classList.toggle('hidden');
+    });
+
+
+    // Mobile "Show More" / "Show Less" toggle functionality
+    document.getElementById('showAdditionalNavMobile').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Get the button and toggle its state
+        const button = event.target;
+        const isShowingMore = button.textContent.trim() === "Show More";
+
+        // Items to hide or show (hide-on-show-more and additional-nav-items)
+        const mobileItemsToHide = document.querySelectorAll('.hide-on-show-more');
+        const additionalNavItemsMobile = document.querySelectorAll('.additional-nav-items');
+
+        if (isShowingMore) {
+            // Hide dropdown items in "Start Your Business"
+            mobileItemsToHide.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Show additional items
+            additionalNavItemsMobile.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Change button text to "Show Less"
+            button.textContent = "Show Less";
+        } else {
+            // Restore the original dropdown items
+            mobileItemsToHide.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Hide additional items
+            additionalNavItemsMobile.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Change button text to "Show More"
+            button.textContent = "Show More";
+        }
+    });
+  </script>
+
+</body>
+</html>

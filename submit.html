@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>iTech Team</title>
+  <link rel="icon" href="image/submarklogo.jpg">
+</head>
+<body class="antialiased bg-gray-100">
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Main Content -->
+        <div class="flex-grow flex items-center justify-center">
+            <div class="bg-white p-12 rounded-lg shadow-md text-center max-w-lg w-full">
+                <h1 class="text-3xl font-bold text-gray-800 mb-6">Thanks!</h1>
+                <p class="text-gray-600 mb-6">We have received your response!</p>
+                <a id="goBackLink" class="text-sky-900 font-semibold text-lg" href="#">Go back</a>
+            </div>
+        </div>
+    
+        <!-- Footer -->
+        <footer class="text-center py-4">
+            <p class="text-gray-500">❤️ from <span class="text-sky-900 font-semibold"><a href="index.html">iTechTeam</a></span></p>
+        </footer>
+    </div>
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const origin = urlParams.get('origin');
+        const goBackLink = document.getElementById('goBackLink');
+    
+        if (origin) {
+            goBackLink.href = origin; // Redirect back to the originating page
+        } else {
+            goBackLink.href = "index.html"; // Default fallback
+            alert("Origin page not found. Redirecting to the main page.");
+        }
+    </script>    
+    
+    
+</body>
+</html>
+        

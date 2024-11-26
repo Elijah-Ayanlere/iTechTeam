@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>iTech Team</title>
+  <link rel="icon" href="image/submarklogo.jpg">
+  <style>
+    .circle-unchecked {
+      fill: none;
+      stroke: #ccc;
+      stroke-width: 2;
+      transition: all 0.2s ease;
+    }
+
+    .circle-checked {
+      fill: #1e40af;
+      stroke: #1e40af;
+      stroke-width: 2;
+      transition: all 0.2s ease;
+    }
+
+
+    .bg-sky-900 {
+        background-color: #1e40af;
+    }
+</style>
+</head>
+<body class="antialiased bg-white">
+
+  <!-- Navigation -->
+  <nav class="bg-sky-900 text-white static">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      <!-- Logo Section -->
+      <a href="index.html">
+        <div class="flex items-center">
+          <img src="image/itechteam logo.png" alt="iTech Team Logo" style="width: 30%;">
+        </div>
+      </a>
+
+      <!-- Navigation Links (Desktop) -->
+      <ul class="hidden md:flex items-center space-x-6">
+        <!-- Regular menu items -->
+        <li><a href="index.html" class="hover:text-gray-300 font-bold">Home</a></li>
+        <li><a href="services.html" class="hover:text-gray-300 font-bold hide-on-show-more-desktop">Services</a></li>
+        <li><a href="about.html" class="hover:text-gray-300 font-bold hide-on-show-more-desktop">About Us</a></li>
+        <li><a href="team.html" class="hover:text-gray-300 font-bold hide-on-show-more-desktop">Meet the Teams</a></li>
+        <li><a href="mindset.html" class="hover:text-gray-300 font-bold">Mindset</a></li>
+    
+        <!-- Dropdown -->
+        <li class="relative group">
+            <a href="#" class="hover:text-gray-300 font-bold">Start Your Business</a>
+            <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-48 py-2 text-white">
+                <li><a href="start_a_business.html" class="block px-4 py-2">Startup Roadmap</a></li>
+                <li><a href="solution.html" class="block px-4 py-2">Itechteam Solution</a></li>
+                <li><a href="start_your_business.html" class="block px-4 py-2">Start Your Business</a></li>
+                <li><a href="start_your_company.html" class="block px-4 py-2">Start Your Company</a></li>
+                <li><a class="relative group px-4 py-2 font-bold" href="#" id="showAdditionalNavDesktop">Show More</a></li>
+            </ul>
+        </li>
+    
+        <!-- Additional items initially hidden -->
+        <li class="hidden additional-nav-items font-bold">
+            <a href="manage_business.html" class="block px-4 py-2">Manage Your Business</a>
+        </li>
+          <li class="hidden additional-nav-items font-bold relative group">
+            <a href="#" class="block px-4 py-2">
+                Fast Services
+            </a>
+            <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-56 py-2 text-white">
+                <li><a href="2weeks_service.html" class="block px-4 py-2">2-weeks services or less</a></li>
+                <li><a href="1month_service.html" class="block px-4 py-2">1 month service or less</a></li>
+                <li><a href="2month_service.html" class="block px-4 py-2">2 Months Services or More</a></li>
+            </ul>
+          </li>
+          <li class="hidden additional-nav-items font-bold relative group">
+            <a href="#" class="block px-4 py-2">
+                Products
+            </a>
+            <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-56 py-2 text-white">
+                <li><a href="digital_products.html" class="block px-4 py-2">Digital Products</a></li>
+                <li><a href="physical_products.html" class="block px-4 py-2">Physical Products</a></li>
+            </ul>
+          </li>
+        <li><a href="contact.html" class="hover:text-gray-300 font-bold">Contact Us</a></li>
+    </ul>      
+
+      <!-- Hamburger Menu (Mobile) -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none text-white">
+          <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-sky-900">
+        <ul class="flex flex-col items-left ml-5 space-y-4 py-4">
+            <!-- Regular menu items -->
+            <li><a href="index.html" class="hover:text-gray-300 font-bold">Home</a></li>
+            <li><a href="services.html" class="hover:text-gray-300 font-bold">Services</a></li>
+            <li><a href="about.html" class="hover:text-gray-300 font-bold">About Us</a></li>
+            <li><a href="team.html" class="hover:text-gray-300 font-bold">Meet the Teams</a></li>
+            <li><a href="mindset.html" class="hover:text-gray-300 font-bold">Mindset</a></li>
+    
+            <!-- Dropdown -->
+            <li class="relative">
+                <a href="#" class="hover:text-gray-300 font-bold" id="startYourBusinessMobile">Start Your Business</a>
+                <ul id="startYourBusinessDropdownMobile" class="flex flex-col bg-sky-900 w-48 py-2 text-white hidden">
+                    <li><a href="start_a_business.html" class="block px-4 py-2 hide-on-show-more">Startup Roadmap</a></li>
+                    <li><a href="solution.html" class="block px-4 py-2 hide-on-show-more">Itechteam Solution</a></li>
+                    <li><a href="start_your_business.html" class="block px-4 py-2 hide-on-show-more">Start Your Business</a></li>
+                    <li><a href="start_your_company.html" class="block px-4 py-2 hide-on-show-more">Start Your Company</a></li>
+                    <li><a href="#" class="px-4 py-2 font-bold" id="showAdditionalNavMobile">Show More</a></li>
+                </ul>
+            </li>            
+    
+            <!-- Additional items initially hidden -->
+            <li class="hidden additional-nav-items">
+                <a href="manage_business.html" class="block px-4 py-2">Manage Your Business</a>
+            </li>
+            <li class="hidden additional-nav-items relative group">
+                <a href="#" class="block px-4 py-2">Fast Services</a>
+                <ul class="hidden absolute left-0 top-full mt-2 w-56 bg-sky-900 shadow-lg group-hover:block z-10">
+                    <li><a href="2weeks_service.html" class="block px-4 py-2">2-weeks services or less</a></li>
+                    <li><a href="1month_service.html" class="block px-4 py-2">1 month service or less</a></li>
+                    <li><a href="2month_service.html" class="block px-4 py-2">2 Months Services or More</a></li>
+                </ul>
+            </li>
+            <li class="hidden additional-nav-items relative group">
+              <a href="#" class="block px-4 py-2">
+                  Products
+              </a>
+              <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-56 py-2 text-white">
+                  <li><a href="digital_products.html" class="block px-4 py-2">Digital Products</a></li>
+                  <li><a href="physical_products.html" class="block px-4 py-2">Physical Products</a></li>
+              </ul>
+            </li>
+          <li><a href="contact.html" class="hover:text-gray-300 font-bold">Contact Us</a></li>
+        </ul>
+    </div>    
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center bg-no-repeat h-[690px] sm:h-[650px] md:h-[810px]" style="background-image: url('image/become-business-consultant.jpg');">
+    <div class="absolute inset-0 bg-sky-900 bg-opacity-50 flex items-center justify-center">
+      <div class="text-center px-4">
+        <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white">
+            Start Your Consulting Business with Us
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <div class="container mx-auto p-6">
+    <div class="rounded-lg mb-6 mt-8">
+        <div class="flex flex-col md:flex-row items-center md:items-start">
+          <!-- Image -->
+            <img src="image/consulting business.png" alt="Branding" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6">
+          <!-- Text -->
+              <div>
+                  <h2 class="text-3xl font-bold mb-2 text-left md:text-left" id="business-category">
+                    Consulting Business
+                  </h2>
+                  <p class="text-lg mt-4 text-left md:text-left">
+                    Consider starting an online boutique clothing store catering to the growing demand for fashion-forward clothing in Nigeria. Partner with local designers or wholesalers to offer unique products.
+                  </p>
+                  <h2 class="text-xl lg:text-2xl font-bold mt-8">
+                    ITechTeam's Assistance:
+                  </h2>
+                  <p class="text-lg mt-2">
+                    iTechTeam can help set up an e-commerce platform, provide digital marketing strategies to reach a wider audience, and offer logistical support for inventory management and shipping.
+                  </p>
+              </div>
+        </div>
+    </div>
+    <div class="mb-8 mt-8">
+     <h2 class="text-2xl font-semibold mb-2">
+        Available Consulting Businesses
+     </h2>
+     <p>
+        Choose your consulting busniess of interest and after send us a message with the button below
+     </p>
+    </div>
+
+    <div class="mt-8 rounded-lg shadow-md p-4 relative">
+        <div class="flex flex-col md:flex-row">
+          <!-- Image Section -->
+          <img 
+            src="image/management.png" 
+            alt="Online Boutique" 
+            class="w-full md:w-1/5 rounded-lg mb-4 md:mb-0 md:mr-4"
+          >
+          
+          <!-- Text Section -->
+          <div class="w-full md:w-4/5">
+            <div class="flex items-center">
+              <h2 class="text-2xl lg:text-3xl mt-2 font-bold mb-2">Management Consulting</h2>
+              <div 
+                class="rounded-full border-4 border-sky-900 p-2 ml-auto lg:ml-auto cursor-pointer" 
+                id="checkbox-1" 
+                onclick="toggleCheckbox('checkbox-1', 'Management Consulting')"
+              >
+                <svg id="checkbox-icon" class="w-4 h-4" viewBox="0 0 24 24">
+                  <circle id="circle" cx="12" cy="12" r="8" class="circle-unchecked"></circle>
+                </svg>
+              </div>
+            </div>
+            
+            <p class="text-black mt-4 text-lg">
+                Provide strategic advice and guidance to businesses on improving operations, increasing efficiency, and achieving organizational goals.
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="mt-8 rounded-lg shadow-md p-4 relative">
+        <div class="flex flex-col md:flex-row">
+          <!-- Image Section -->
+          <img 
+            src="image/financial.png" 
+            alt="Online Boutique" 
+            class="w-full md:w-1/5 rounded-lg mb-4 md:mb-0 md:mr-4"
+          >
+          
+          <!-- Text Section -->
+          <div class="w-full md:w-4/5">
+            <div class="flex items-center">
+              <h2 class="text-2xl lg:text-3xl mt-2 font-bold mb-2">Financial Consulting</h2>
+              <div 
+                class="rounded-full border-4 border-sky-900 p-2 ml-auto lg:ml-auto cursor-pointer" 
+                id="checkbox-2" 
+                onclick="toggleCheckbox('checkbox-2', 'Financial Consulting')"
+              >
+                <svg id="checkbox-icon" class="w-4 h-4" viewBox="0 0 24 24">
+                  <circle id="circle" cx="12" cy="12" r="8" class="circle-unchecked"></circle>
+                </svg>
+              </div>
+            </div>
+            
+            <p class="text-black mt-4 text-lg">
+                Offer financial planning, budgeting, and investment advice to individuals, businesses, and organizations.
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="mt-8 rounded-lg shadow-md p-4 relative">
+        <div class="flex flex-col md:flex-row">
+          <!-- Image Section -->
+          <img 
+            src="image/marketing.png" 
+            alt="Online Boutique" 
+            class="w-full md:w-1/5 rounded-lg mb-4 md:mb-0 md:mr-4"
+          >
+          
+          <!-- Text Section -->
+          <div class="w-full md:w-4/5">
+            <div class="flex items-center">
+              <h2 class="text-2xl lg:text-3xl mt-2 font-bold mb-2">Marketing Consulting</h2>
+              <div 
+                class="rounded-full border-4 border-sky-900 p-2 ml-auto lg:ml-auto cursor-pointer" 
+                id="checkbox-3" 
+                onclick="toggleCheckbox('checkbox-3', 'Marketing Consulting')"
+              >
+                <svg id="checkbox-icon" class="w-4 h-4" viewBox="0 0 24 24">
+                  <circle id="circle" cx="12" cy="12" r="8" class="circle-unchecked"></circle>
+                </svg>
+              </div>
+            </div>
+            
+            <p class="text-black mt-4 text-lg">
+                Help businesses develop and implement marketing strategies, including market research, branding, advertising, and digital marketing campaigns.
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="mt-8 rounded-lg shadow-md p-4 relative">
+        <div class="flex flex-col md:flex-row">
+          <!-- Image Section -->
+          <img 
+            src="image/real estate.png" 
+            alt="Online Boutique" 
+            class="w-full md:w-1/5 rounded-lg mb-4 md:mb-0 md:mr-4"
+          >
+          
+          <!-- Text Section -->
+          <div class="w-full md:w-4/5">
+            <div class="flex items-center">
+              <h2 class="text-2xl lg:text-3xl mt-2 font-bold mb-2"> Real Estate Consulting</h2>
+              <div 
+                class="rounded-full border-4 border-sky-900 p-2 ml-auto lg:ml-auto cursor-pointer" 
+                id="checkbox-4" 
+                onclick="toggleCheckbox('checkbox-4', 'Real Estate Consulting')"
+              >
+                <svg id="checkbox-icon" class="w-4 h-4" viewBox="0 0 24 24">
+                  <circle id="circle" cx="12" cy="12" r="8" class="circle-unchecked"></circle>
+                </svg>
+              </div>
+            </div>
+            
+            <p class="text-black mt-4 text-lg">
+                Offer advice and assistance to individuals and companies on real estate investments, property management, market analysis, and development projects.
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="mt-8 rounded-lg shadow-md p-4 relative">
+        <div class="flex flex-col md:flex-row">
+          <!-- Image Section -->
+          <img 
+            src="image/strategic.png" 
+            alt="Online Boutique" 
+            class="w-full md:w-1/5 rounded-lg mb-4 md:mb-0 md:mr-4"
+          >
+          
+          <!-- Text Section -->
+          <div class="w-full md:w-4/5">
+            <div class="flex items-center">
+              <h2 class="text-2xl lg:text-3xl mt-2 font-bold mb-2">Strategic Planning Consulting</h2>
+              <div 
+                class="rounded-full border-4 border-sky-900 p-2 ml-auto lg:ml-auto cursor-pointer" 
+                id="checkbox-5" 
+                onclick="toggleCheckbox('checkbox-5', 'Strategic Planning Consulting')"
+              >
+                <svg id="checkbox-icon" class="w-4 h-4" viewBox="0 0 24 24">
+                  <circle id="circle" cx="12" cy="12" r="8" class="circle-unchecked"></circle>
+                </svg>
+              </div>
+            </div>
+            
+            <p class="text-black mt-4 text-lg">
+                Help organizations develop long-term strategic plans, set goals, and navigate challenges by providing insights, analysis, and strategic guidance.
+            </p>
+          </div>
+        </div>
+    </div>
+    
+    <div class="mt-8 rounded-lg shadow-md p-4 relative">
+        <div class="flex flex-col md:flex-row">
+          <!-- Image Section -->
+          <img 
+            src="image/healthcare.png" 
+            alt="Online Boutique" 
+            class="w-full md:w-1/5 rounded-lg mb-4 md:mb-0 md:mr-4"
+          >
+          
+          <!-- Text Section -->
+          <div class="w-full md:w-4/5">
+            <div class="flex items-center">
+              <h2 class="text-2xl lg:text-3xl mt-2 font-bold mb-2">Healthcare Consulting</h2>
+              <div 
+                class="rounded-full border-4 border-sky-900 p-2 ml-auto lg:ml-auto cursor-pointer" 
+                id="checkbox-6" 
+                onclick="toggleCheckbox('checkbox-6', 'Healthcare Consulting')"
+              >
+                <svg id="checkbox-icon" class="w-4 h-4" viewBox="0 0 24 24">
+                  <circle id="circle" cx="12" cy="12" r="8" class="circle-unchecked"></circle>
+                </svg>
+              </div>
+            </div>
+            
+            <p class="text-black mt-4 text-lg">
+                Offer advisory services to healthcare providers, insurers, and organizations on healthcare policy, regulatory compliance, operational efficiency, and patient care.
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="mt-8 rounded-lg shadow-md p-4 relative">
+        <div class="flex flex-col md:flex-row">
+          <!-- Image Section -->
+          <img 
+            src="image/It consulting.png" 
+            alt="Online Boutique" 
+            class="w-full md:w-1/5 rounded-lg mb-4 md:mb-0 md:mr-4"
+          >
+          
+          <!-- Text Section -->
+          <div class="w-full md:w-4/5">
+            <div class="flex items-center">
+              <h2 class="text-2xl lg:text-3xl mt-2 font-bold mb-2">IT Consulting</h2>
+              <div 
+                class="rounded-full border-4 border-sky-900 p-2 ml-auto lg:ml-auto cursor-pointer" 
+                id="checkbox-7" 
+                onclick="toggleCheckbox('checkbox-7', 'IT Consulting')"
+              >
+                <svg id="checkbox-icon" class="w-4 h-4" viewBox="0 0 24 24">
+                  <circle id="circle" cx="12" cy="12" r="8" class="circle-unchecked"></circle>
+                </svg>
+              </div>
+            </div>
+            
+            <p class="text-black mt-4 text-lg">
+                Provide technology consulting services, including IT infrastructure management, software development, cybersecurity, and digital transformation
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="mt-8">
+        <button class="bg-sky-900 text-white px-6 py-2 text-xl font-bold rounded-xl mt-20 shadow-md hover:bg-sky-800 transition duration-300 w-72 h-16 mx-auto block id="message-btn" onclick="sendAMessage()">Send a message</button>
+      </div>
+</div>
+
+   
+
+  <section class="relative bg-cover bg-center py-12 text-white overflow-x-hidden" style="background-image: url('image/world.png');">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-sky-900 opacity-40"></div>
+    
+    <!-- Content -->
+    <div class="relative container mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Logo and Newsletter Section -->
+      <div>
+        <!-- Logo -->
+        <a href="index.html">
+          <div class="mb-8">
+            <img src="image/itechteam logo.png" alt="Logo" class="h-64">
+          </div>
+        </a>
+        <!-- Newsletter -->
+        <h3 class="text-2xl sm:text-xl md:text-2xl lg:text-2xl font-bold mb-4">Subscribe to our newsletter</h3>
+        <form class="space-y-4">
+          <!-- Input Field -->
+          <input
+            type="email"
+            placeholder="yourname@email.com"
+            class="w-full px-4 py-2 rounded-md text-black focus:outline-none"
+          >
+          <!-- Button -->
+          <button
+            type="submit"
+            class="w-full bg-sky-900 px-6 py-3 rounded-md shadow-md text-center font-bold hover:bg-sky-800 transition duration-300"
+          >
+            Subscribe
+          </button>
+        </form>
+        <!-- Social Media Icons -->
+        <div class="flex gap-4 mt-8">
+          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+            <img src="image/facebook logo.png" alt="Facebook" class="h-6 w-6">
+          </a>
+          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+            <img src="image/instagram logo.png" alt="Instagram" class="h-6 w-6">
+          </a>
+          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+            <img src="image/twitter logo.png" alt="Twitter" class="h-6 w-6">
+          </a>
+        </div>
+      </div>
+  
+      <!-- Quick Links Section -->
+      <div class="mt-8 md:mt-32 md:ml-24 lg:ml-36">
+        <h3 class="text-2xl sm:text-xl md:text-3xl font-bold mb-6 whitespace-nowrap">Quick Links</h3>
+        <ul class="space-y-2 md:space-y-4 text-xl md:text-2xl lg:text-2xl">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="services.html" class="hover:underline">Service</a></li>
+          <li><a href="about.html" class="hover:underline">About Us</a></li>
+          <li><a href="team.html" class="hover:underline">Meet the Team</a></li>
+          <li><a href="mindset.html" class="hover:underline">Mindset</a></li>
+          <li><a href="start_a_business.html" class="hover:underline">Start a Business</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Fast Services Section -->
+      <div class="mt-8 md:mt-32 md:ml-16 lg:ml-32">
+        <h3 class="text-2xl sm:text-xl md:text-3xl font-bold mb-6 whitespace-nowrap">Fast Services</h3>
+        <ul class="space-y-2 md:space-y-4 text-xl md:text-2xl lg:text-2xl">
+          <li><a href="1month_service.html" class="hover:underline">1 Month services or less</a></li>
+          <li><a href="2weeks_service.html" class="hover:underline">2 Weeks services or less</a></li>
+          <li><a href="2month_service.html" class="hover:underline">2 Months services or more</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- JavaScript -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    function toggleCheckbox(id) {
+        const checkbox = document.getElementById(id);
+        const circle = checkbox.querySelector('circle');
+
+        if (checkbox.classList.contains('checked')) {
+            // Uncheck
+            checkbox.classList.remove('checked');
+            circle.classList.remove('fill-sky-900'); // Remove the filled background
+            circle.classList.add('fill-white'); // Add the white background
+        } else {
+            // Check
+            checkbox.classList.add('checked');
+            circle.classList.remove('fill-white'); // Remove the white background
+            circle.classList.add('fill-sky-900'); // Add the filled background
+        }
+    }
+
+    // Function for desktop "Show More" button
+    document.getElementById('showAdditionalNavDesktop').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Button for toggling Show More / Show Less
+        const button = event.target;
+        const isShowingMore = button.textContent.trim() === "Show More";
+
+        // Regular menu items to hide
+        const desktopItemsToHide = document.querySelectorAll('.hide-on-show-more-desktop');
+        const additionalNavItemsDesktop = document.querySelectorAll('.additional-nav-items');
+
+        if (isShowingMore) {
+            // Hide regular menu items
+            desktopItemsToHide.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Show additional items
+            additionalNavItemsDesktop.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Update button text to "Show Less"
+            button.textContent = "Show Less";
+        } else {
+            // Restore the regular menu items
+            desktopItemsToHide.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Hide additional items
+            additionalNavItemsDesktop.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Update button text back to "Show More"
+            button.textContent = "Show More";
+        }
+    });
+
+
+   // Toggle "Start Your Business" dropdown on mobile
+    document.getElementById('startYourBusinessMobile').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Find the dropdown under "Start Your Business"
+        const dropdown = document.getElementById('startYourBusinessDropdownMobile');
+
+        // Toggle dropdown visibility
+        dropdown.classList.toggle('hidden');
+    });
+
+
+    // Mobile "Show More" / "Show Less" toggle functionality
+    document.getElementById('showAdditionalNavMobile').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Get the button and toggle its state
+        const button = event.target;
+        const isShowingMore = button.textContent.trim() === "Show More";
+
+        // Items to hide or show (hide-on-show-more and additional-nav-items)
+        const mobileItemsToHide = document.querySelectorAll('.hide-on-show-more');
+        const additionalNavItemsMobile = document.querySelectorAll('.additional-nav-items');
+
+        if (isShowingMore) {
+            // Hide dropdown items in "Start Your Business"
+            mobileItemsToHide.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Show additional items
+            additionalNavItemsMobile.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Change button text to "Show Less"
+            button.textContent = "Show Less";
+        } else {
+            // Restore the original dropdown items
+            mobileItemsToHide.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Hide additional items
+            additionalNavItemsMobile.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Change button text to "Show More"
+            button.textContent = "Show More";
+        }
+    });
+
+    function toggleCheckbox(id) {
+        const checkbox = document.getElementById(id);
+        const circle = checkbox.querySelector('circle');
+
+        if (checkbox.classList.contains('checked')) {
+            // Uncheck
+            checkbox.classList.remove('checked');
+            circle.classList.remove('fill-sky-900'); // Remove the filled background
+            circle.classList.add('fill-white'); // Add the white background
+        } else {
+            // Check
+            checkbox.classList.add('checked');
+            circle.classList.remove('fill-white'); // Remove the white background
+            circle.classList.add('fill-sky-900'); // Add the filled background
+        }
+    }
+
+    let selectedServices = [];
+
+    function toggleCheckbox(id, serviceName) {
+        const checkbox = document.getElementById(id);
+        const circle = checkbox.querySelector("#circle");
+
+        if (circle.classList.contains("circle-unchecked")) {
+            circle.classList.remove("circle-unchecked");
+            circle.classList.add("circle-checked");
+            selectedServices.push(serviceName);
+        } else {
+            circle.classList.remove("circle-checked");
+            circle.classList.add("circle-unchecked");
+            const index = selectedServices.indexOf(serviceName);
+            if (index !== -1) {
+                selectedServices.splice(index, 1);
+            }
+        }
+    }
+
+    function sendAMessage() {
+        if (selectedServices.length > 0) {
+            localStorage.setItem('selectedServices', JSON.stringify(selectedServices));
+            window.location.href = 'business_contact_us.html';
+        } else {
+            alert('Please select at least one business type.');
+        }
+    }
+
+    // Get the business category text
+    const businessCategory = document.getElementById('business-category').textContent.trim();
+
+    // Save it to local storage
+    localStorage.setItem('businessCategory', businessCategory);
+  </script>
+
+</body>
+</html>

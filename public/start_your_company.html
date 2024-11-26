@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>iTech Team</title>
+  <link rel="icon" href="image/submarklogo.jpg">
+</head>
+<body class="antialiased bg-white">
+
+  <!-- Navigation -->
+  <nav class="bg-sky-900 text-white static">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      <!-- Logo Section -->
+      <a href="index.html">
+        <div class="flex items-center">
+          <img src="image/itechteam logo.png" alt="iTech Team Logo" style="width: 30%;">
+        </div>
+      </a>
+
+      <!-- Navigation Links (Desktop) -->
+      <ul class="hidden md:flex items-center space-x-6">
+        <!-- Regular menu items -->
+        <li><a href="index.html" class="hover:text-gray-300 font-bold">Home</a></li>
+        <li><a href="services.html" class="hover:text-gray-300 font-bold hide-on-show-more-desktop">Services</a></li>
+        <li><a href="about.html" class="hover:text-gray-300 font-bold hide-on-show-more-desktop">About Us</a></li>
+        <li><a href="team.html" class="hover:text-gray-300 font-bold hide-on-show-more-desktop">Meet the Teams</a></li>
+        <li><a href="mindset.html" class="hover:text-gray-300 font-bold">Mindset</a></li>
+    
+        <!-- Dropdown -->
+        <li class="relative group">
+            <a href="#" class="hover:text-gray-300 font-bold">Start Your Business</a>
+            <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-48 py-2 text-white">
+                <li><a href="start_a_business.html" class="block px-4 py-2">Startup Roadmap</a></li>
+                <li><a href="solution.html" class="block px-4 py-2">Itechteam Solution</a></li>
+                <li><a href="start_your_business.html" class="block px-4 py-2">Start Your Business</a></li>
+                <li><a href="start_your_company.html" class="block px-4 py-2">Start Your Company</a></li>
+                <li><a class="relative group px-4 py-2 font-bold" href="#" id="showAdditionalNavDesktop">Show More</a></li>
+            </ul>
+        </li>
+    
+        <!-- Additional items initially hidden -->
+        <li class="hidden additional-nav-items font-bold">
+            <a href="manage_business.html" class="block px-4 py-2">Manage Your Business</a>
+        </li>
+          <li class="hidden additional-nav-items font-bold relative group">
+            <a href="#" class="block px-4 py-2">
+                Fast Services
+            </a>
+            <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-56 py-2 text-white">
+                <li><a href="2weeks_service.html" class="block px-4 py-2">2-weeks services or less</a></li>
+                <li><a href="1month_service.html" class="block px-4 py-2">1 month service or less</a></li>
+                <li><a href="2month_service.html" class="block px-4 py-2">2 Months Services or More</a></li>
+            </ul>
+          </li>
+          <li class="hidden additional-nav-items font-bold relative group">
+            <a href="#" class="block px-4 py-2">
+                Products
+            </a>
+            <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-56 py-2 text-white">
+                <li><a href="digital_products.html" class="block px-4 py-2">Digital Products</a></li>
+                <li><a href="physical_products.html" class="block px-4 py-2">Physical Products</a></li>
+            </ul>
+          </li>
+        <li><a href="contact.html" class="hover:text-gray-300 font-bold">Contact Us</a></li>
+    </ul>      
+
+      <!-- Hamburger Menu (Mobile) -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none text-white">
+          <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-sky-900">
+        <ul class="flex flex-col items-left ml-5 space-y-4 py-4">
+            <!-- Regular menu items -->
+            <li><a href="index.html" class="hover:text-gray-300 font-bold">Home</a></li>
+            <li><a href="services.html" class="hover:text-gray-300 font-bold">Services</a></li>
+            <li><a href="about.html" class="hover:text-gray-300 font-bold">About Us</a></li>
+            <li><a href="team.html" class="hover:text-gray-300 font-bold">Meet the Teams</a></li>
+            <li><a href="mindset.html" class="hover:text-gray-300 font-bold">Mindset</a></li>
+    
+            <!-- Dropdown -->
+            <li class="relative">
+                <a href="#" class="hover:text-gray-300 font-bold" id="startYourBusinessMobile">Start Your Business</a>
+                <ul id="startYourBusinessDropdownMobile" class="flex flex-col bg-sky-900 w-48 py-2 text-white hidden">
+                    <li><a href="start_a_business.html" class="block px-4 py-2 hide-on-show-more">Startup Roadmap</a></li>
+                    <li><a href="solution.html" class="block px-4 py-2 hide-on-show-more">Itechteam Solution</a></li>
+                    <li><a href="start_your_business.html" class="block px-4 py-2 hide-on-show-more">Start Your Business</a></li>
+                    <li><a href="start_your_company.html" class="block px-4 py-2 hide-on-show-more">Start Your Company</a></li>
+                    <li><a href="#" class="px-4 py-2 font-bold" id="showAdditionalNavMobile">Show More</a></li>
+                </ul>
+            </li>            
+    
+            <!-- Additional items initially hidden -->
+            <li class="hidden additional-nav-items">
+                <a href="manage_business.html" class="block px-4 py-2">Manage Your Business</a>
+            </li>
+            <li class="hidden additional-nav-items relative group">
+                <a href="#" class="block px-4 py-2">Fast Services</a>
+                <ul class="hidden absolute left-0 top-full mt-2 w-56 bg-sky-900 shadow-lg group-hover:block z-10">
+                    <li><a href="2weeks_service.html" class="block px-4 py-2">2-weeks services or less</a></li>
+                    <li><a href="1month_service.html" class="block px-4 py-2">1 month service or less</a></li>
+                    <li><a href="2month_service.html" class="block px-4 py-2">2 Months Services or More</a></li>
+                </ul>
+            </li>
+            <li class="hidden additional-nav-items relative group">
+              <a href="#" class="block px-4 py-2">
+                  Products
+              </a>
+              <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-56 py-2 text-white">
+                  <li><a href="digital_products.html" class="block px-4 py-2">Digital Products</a></li>
+                  <li><a href="physical_products.html" class="block px-4 py-2">Physical Products</a></li>
+              </ul>
+            </li>
+          <li><a href="contact.html" class="hover:text-gray-300 font-bold">Contact Us</a></li>
+        </ul>
+    </div>    
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center bg-no-repeat h-[690px] sm:h-[650px] md:h-[810px]" style="background-image: url('image/company.jpg');">
+    <div class="absolute inset-0 bg-sky-900 bg-opacity-50 flex items-center justify-center">
+      <div class="text-center px-4">
+        <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white">
+            Start Your Company with Us
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-7xl mx-auto p-8">
+    <h1 class="text-2xl lg:text-3xl font-bold mb-6">Starting a Company in Nigeria with iTechTeam</h1>
+    <div class="mb-6">
+        <h2 class="text-xl lg:text-2xl font-bold">Advice:</h2>
+        <p class="text-lg lg:text-xl">Identify sectors with high growth potential in Nigeria such as technology, healthcare, finance, education, and hospitality. Conduct thorough market research to understand the local landscape and consumer needs.</p>
+    </div>
+    <div>
+        <h2 class="text-xl lg:text-2xl font-bold">ITechTeam's Assistance:</h2>
+        <p class="text-lg lg:text-xl">iTechTeam can provide comprehensive market analysis reports, assist in securing necessary permits and licenses, offer guidance on regulatory compliance, and connect you with company or industry experts and partners.</p>
+    </div>
+
+    <div class="bg-gray-100 rounded-lg shadow-md p-6 mb-6 mt-12">
+      <div class="flex flex-col md:flex-row items-center md:items-start">
+        <!-- Image -->
+          <img src="image/technology.png" alt="Branding" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6">
+        <!-- Text -->
+            <div>
+                <h2 class="text-2xl font-bold mb-2 text-left md:text-left">
+                    Technology
+                </h2>
+                <p class="text-lg mt-4 text-left md:text-left">
+                    Nigeria's technology sector is experiencing rapid growth, with opportunities in software development, hardware manufacturing, and IT consulting.
+                </p>
+                <h2 class="text-xl lg:text-2xl font-bold mt-8">
+                  ITechTeam's Assistance:
+                </h2>
+                <p class="text-lg mt-2">
+                    iTechTeam can provide technology infrastructure setup, software development services...
+                </p>
+                <div class="flex justify-start mt-8">
+                  <a href="technology_company.html">
+                      <button class="bg-sky-900 text-white px-6 py-2 text-xl font-bold rounded-xl shadow-md hover:bg-sky-800 transition duration-300 h-12 mx-auto block lg:w-60">
+                          Read more
+                      </button>
+                  </a>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-100 rounded-lg shadow-md p-6 mb-6 mt-12">
+      <div class="flex flex-col md:flex-row items-center md:items-start">
+        <!-- Image -->
+          <img src="image/health-care.png" alt="Branding" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6">
+        <!-- Text -->
+            <div>
+                <h2 class="text-2xl font-bold mb-2 text-left md:text-left">
+                    Health-care 
+                </h2>
+                <p class="text-lg mt-4 text-left md:text-left">
+                    Nigeria's healthcare industry presents opportunities in medical services, pharmaceuticals, medical equipment distribution, and telemedicine.
+                </p>
+                <h2 class="text-xl lg:text-2xl font-bold mt-8">
+                  ITechTeam's Assistance:
+                </h2>
+                <p class="text-lg mt-2">
+                    iTechTeam can develop healthcare management software, implement telehealth solutions...
+                </p>
+                <div class="flex justify-start mt-8">
+                  <a href="health_company.html">
+                      <button class="bg-sky-900 text-white px-6 py-2 text-xl font-bold rounded-xl shadow-md hover:bg-sky-800 transition duration-300 h-12 mx-auto block lg:w-60">
+                          Read more
+                      </button>
+                  </a>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-100 rounded-lg shadow-md p-6 mb-6 mt-12">
+      <div class="flex flex-col md:flex-row items-center md:items-start">
+        <!-- Image -->
+          <img src="image/finance.png" alt="Branding" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6">
+        <!-- Text -->
+            <div>
+                <h2 class="text-2xl font-bold mb-2 text-left md:text-left">
+                    Finance
+                </h2>
+                <p class="text-lg mt-4 text-left md:text-left">
+                    Nigeria's finance sector offers opportunities in banking, investment management, insurance, fintech startups, and financial advisory services.
+                </p>
+                <h2 class="text-xl lg:text-2xl font-bold mt-8">
+                  ITechTeam's Assistance:
+                </h2>
+                <p class="text-lg mt-2">
+                    iTechTeam can develop banking software solutions, create mobile banking apps, provide cybersecurity for...
+                </p>
+                <div class="flex justify-start mt-8">
+                  <a href="finance_company.html">
+                      <button class="bg-sky-900 text-white px-6 py-2 text-xl font-bold rounded-xl shadow-md hover:bg-sky-800 transition duration-300 h-12 mx-auto block lg:w-60">
+                          Read more
+                       </button>
+                  </a>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-100 rounded-lg shadow-md p-6 mb-6 mt-12">
+      <div class="flex flex-col md:flex-row items-center md:items-start">
+        <!-- Image -->
+          <img src="image/education.png" alt="Branding" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6">
+        <!-- Text -->
+            <div>
+                <h2 class="text-2xl font-bold mb-2 text-left md:text-left">
+                    Education
+                </h2>
+                <p class="text-lg mt-4 text-left md:text-left">
+                    Nigeria's education industry is ripe for innovation with opportunities in schools, educational technology startups, tutoring services, and vocational training.
+                </p>
+                <h2 class="text-xl lg:text-2xl font-bold mt-8">
+                  ITechTeam's Assistance:
+                </h2>
+                <p class="text-lg mt-2">
+                    iTechTeam can develop e-learning platforms, design educational apps, provide IT infrastructure for schools...
+                </p>
+                <div class="flex justify-start mt-8">
+                  <a href="education_company.html">
+                      <button class="bg-sky-900 text-white px-6 py-2 text-xl font-bold rounded-xl shadow-md hover:bg-sky-800 transition duration-300 h-12 mx-auto block lg:w-60">
+                          Read more
+                      </button>
+                  </a>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-100 rounded-lg shadow-md p-6 mb-6 mt-12">
+      <div class="flex flex-col md:flex-row items-center md:items-start">
+        <!-- Image -->
+          <img src="image/hospitality.png" alt="Branding" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6">
+        <!-- Text -->
+            <div>
+                <h2 class="text-2xl font-bold mb-2 text-left md:text-left">
+                    Hospitality
+                </h2>
+                <p class="text-lg mt-4 text-left md:text-left">
+                    Nigeria's hospitality industry presents opportunities in hotels, restaurants, event planning, tourism, and travel agencies.
+                </p>
+                <h2 class="text-xl lg:text-2xl font-bold mt-8">
+                  ITechTeam's Assistance:
+                </h2>
+                <p class="text-lg mt-2">
+                    iTechTeam can develop hotel management software, create online booking platforms...
+                </p>
+                <div class="flex justify-start mt-8">
+                  <a href="hospitality_company.html">
+                      <button class="bg-sky-900 text-white px-6 py-2 text-xl font-bold rounded-xl shadow-md hover:bg-sky-800 transition duration-300 h-12 mx-auto block lg:w-60">
+                          Read more
+                      </button>
+                  </a>
+              </div>
+            </div>
+      </div>
+    </div>
+    
+    <div class="bg-gray-100 rounded-lg shadow-md p-6 mb-6 mt-12">
+      <div class="flex flex-col md:flex-row items-center md:items-start">
+        <!-- Image -->
+          <img src="image/others.png" alt="Branding" class="w-full md:w-1/4 rounded-lg mb-4 md:mb-0 md:mr-6">
+        <!-- Text -->
+            <div>
+                <h2 class="text-2xl font-bold mb-2 text-left md:text-left">
+                  Others
+                </h2>
+                <p class="text-lg mt-4 text-left md:text-left">
+                    Unable to find the business you wish to start? Please click below to send us a message to get it started and brainstorm
+                </p>
+                <h2 class="text-xl lg:text-2xl font-bold mt-8">
+                  ITechTeam's Assistance:
+                </h2>
+                <p class="text-lg mt-2">
+                    iTechTeam can help in brainstorming and bring to live that your great business idea we are expecting your message
+                </p>
+                <div class="flex justify-start mt-8">
+                  <a href="contact.html">
+                      <button class="bg-sky-900 text-white px-6 py-2 text-xl font-bold rounded-xl shadow-md hover:bg-sky-800 transition duration-300 h-12 mx-auto block lg:w-60">
+                        Send message
+                        </button>
+                  </a>
+              </div>
+            </div>
+      </div>
+    </div>
+</div>
+
+  <section class="relative bg-cover bg-center py-12 text-white overflow-x-hidden" style="background-image: url('image/world.png');">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-sky-900 opacity-40"></div>
+    
+    <!-- Content -->
+    <div class="relative container mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Logo and Newsletter Section -->
+      <div>
+        <!-- Logo -->
+        <a href="index.html">
+          <div class="mb-8">
+            <img src="image/itechteam logo.png" alt="Logo" class="h-64">
+          </div>
+        </a>
+        <!-- Newsletter -->
+        <h3 class="text-2xl sm:text-xl md:text-2xl lg:text-2xl font-bold mb-4">Subscribe to our newsletter</h3>
+        <form class="space-y-4">
+          <!-- Input Field -->
+          <input
+            type="email"
+            placeholder="yourname@email.com"
+            class="w-full px-4 py-2 rounded-md text-black focus:outline-none"
+          >
+          <!-- Button -->
+          <button
+            type="submit"
+            class="w-full bg-sky-900 px-6 py-3 rounded-md shadow-md text-center font-bold hover:bg-sky-800 transition duration-300"
+          >
+            Subscribe
+          </button>
+        </form>
+        <!-- Social Media Icons -->
+        <div class="flex gap-4 mt-8">
+          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+            <img src="image/facebook logo.png" alt="Facebook" class="h-6 w-6">
+          </a>
+          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+            <img src="image/instagram logo.png" alt="Instagram" class="h-6 w-6">
+          </a>
+          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+            <img src="image/twitter logo.png" alt="Twitter" class="h-6 w-6">
+          </a>
+        </div>
+      </div>
+  
+      <!-- Quick Links Section -->
+      <div class="mt-8 md:mt-32 md:ml-24 lg:ml-36">
+        <h3 class="text-2xl sm:text-xl md:text-3xl font-bold mb-6 whitespace-nowrap">Quick Links</h3>
+        <ul class="space-y-2 md:space-y-4 text-xl md:text-2xl lg:text-2xl">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="services.html" class="hover:underline">Service</a></li>
+          <li><a href="about.html" class="hover:underline">About Us</a></li>
+          <li><a href="team.html" class="hover:underline">Meet the Team</a></li>
+          <li><a href="mindset.html" class="hover:underline">Mindset</a></li>
+          <li><a href="start_a_business.html" class="hover:underline">Start a Business</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Fast Services Section -->
+      <div class="mt-8 md:mt-32 md:ml-16 lg:ml-32">
+        <h3 class="text-2xl sm:text-xl md:text-3xl font-bold mb-6 whitespace-nowrap">Fast Services</h3>
+        <ul class="space-y-2 md:space-y-4 text-xl md:text-2xl lg:text-2xl">
+          <li><a href="1month_service.html" class="hover:underline">1 Month services or less</a></li>
+          <li><a href="2weeks_service.html" class="hover:underline">2 Weeks services or less</a></li>
+          <li><a href="2month_service.html" class="hover:underline">2 Months services or more</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- JavaScript -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    function toggleCheckbox(id) {
+        const checkbox = document.getElementById(id);
+        const circle = checkbox.querySelector('circle');
+
+        if (checkbox.classList.contains('checked')) {
+            // Uncheck
+            checkbox.classList.remove('checked');
+            circle.classList.remove('fill-sky-900'); // Remove the filled background
+            circle.classList.add('fill-white'); // Add the white background
+        } else {
+            // Check
+            checkbox.classList.add('checked');
+            circle.classList.remove('fill-white'); // Remove the white background
+            circle.classList.add('fill-sky-900'); // Add the filled background
+        }
+    }
+
+    // Function for desktop "Show More" button
+    document.getElementById('showAdditionalNavDesktop').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Button for toggling Show More / Show Less
+        const button = event.target;
+        const isShowingMore = button.textContent.trim() === "Show More";
+
+        // Regular menu items to hide
+        const desktopItemsToHide = document.querySelectorAll('.hide-on-show-more-desktop');
+        const additionalNavItemsDesktop = document.querySelectorAll('.additional-nav-items');
+
+        if (isShowingMore) {
+            // Hide regular menu items
+            desktopItemsToHide.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Show additional items
+            additionalNavItemsDesktop.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Update button text to "Show Less"
+            button.textContent = "Show Less";
+        } else {
+            // Restore the regular menu items
+            desktopItemsToHide.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Hide additional items
+            additionalNavItemsDesktop.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Update button text back to "Show More"
+            button.textContent = "Show More";
+        }
+    });
+
+
+   // Toggle "Start Your Business" dropdown on mobile
+    document.getElementById('startYourBusinessMobile').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Find the dropdown under "Start Your Business"
+        const dropdown = document.getElementById('startYourBusinessDropdownMobile');
+
+        // Toggle dropdown visibility
+        dropdown.classList.toggle('hidden');
+    });
+
+
+    // Mobile "Show More" / "Show Less" toggle functionality
+    document.getElementById('showAdditionalNavMobile').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Get the button and toggle its state
+        const button = event.target;
+        const isShowingMore = button.textContent.trim() === "Show More";
+
+        // Items to hide or show (hide-on-show-more and additional-nav-items)
+        const mobileItemsToHide = document.querySelectorAll('.hide-on-show-more');
+        const additionalNavItemsMobile = document.querySelectorAll('.additional-nav-items');
+
+        if (isShowingMore) {
+            // Hide dropdown items in "Start Your Business"
+            mobileItemsToHide.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Show additional items
+            additionalNavItemsMobile.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Change button text to "Show Less"
+            button.textContent = "Show Less";
+        } else {
+            // Restore the original dropdown items
+            mobileItemsToHide.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Hide additional items
+            additionalNavItemsMobile.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Change button text to "Show More"
+            button.textContent = "Show More";
+        }
+    });
+  </script>
+
+</body>
+</html>

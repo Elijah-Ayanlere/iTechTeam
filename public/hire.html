@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>iTech Team</title>
+  <link rel="icon" href="image/submarklogo.jpg">
+</head>
+<body class="antialiased bg-gray-100">
+
+  <!-- Navigation -->
+  <nav class="bg-sky-900 text-white static">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      <!-- Logo Section -->
+      <a href="index.html">
+        <div class="flex items-center">
+          <img src="image/itechteam logo.png" alt="iTech Team Logo" style="width: 30%;">
+        </div>
+      </a>
+
+      <!-- Navigation Links (Desktop) -->
+      <ul class="hidden md:flex items-center space-x-6">
+        <!-- Regular menu items -->
+        <li><a href="index.html" class="hover:text-gray-300 font-bold">Home</a></li>
+        <li><a href="services.html" class="hover:text-gray-300 font-bold hide-on-show-more-desktop">Services</a></li>
+        <li><a href="about.html" class="hover:text-gray-300 font-bold hide-on-show-more-desktop">About Us</a></li>
+        <li><a href="team.html" class="hover:text-gray-300 font-bold hide-on-show-more-desktop">Meet the Teams</a></li>
+        <li><a href="mindset.html" class="hover:text-gray-300 font-bold">Mindset</a></li>
+    
+        <!-- Dropdown -->
+        <li class="relative group">
+            <a href="#" class="hover:text-gray-300 font-bold">Start Your Business</a>
+            <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-48 py-2 text-white">
+                <li><a href="start_a_business.html" class="block px-4 py-2">Startup Roadmap</a></li>
+                <li><a href="solution.html" class="block px-4 py-2">Itechteam Solution</a></li>
+                <li><a href="start_your_business.html" class="block px-4 py-2">Start Your Business</a></li>
+                <li><a href="start_your_company.html" class="block px-4 py-2">Start Your Company</a></li>
+                <li><a class="relative group px-4 py-2 font-bold" href="#" id="showAdditionalNavDesktop">Show More</a></li>
+            </ul>
+        </li>
+    
+        <!-- Additional items initially hidden -->
+        <li class="hidden additional-nav-items font-bold">
+            <a href="manage_business.html" class="block px-4 py-2">Manage Your Business</a>
+        </li>
+          <li class="hidden additional-nav-items font-bold relative group">
+            <a href="#" class="block px-4 py-2">
+                Fast Services
+            </a>
+            <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-56 py-2 text-white">
+                <li><a href="2weeks_service.html" class="block px-4 py-2">2-weeks services or less</a></li>
+                <li><a href="1month_service.html" class="block px-4 py-2">1 month service or less</a></li>
+                <li><a href="2month_service.html" class="block px-4 py-2">2 Months Services or More</a></li>
+            </ul>
+          </li>
+          <li class="hidden additional-nav-items font-bold relative group">
+            <a href="#" class="block px-4 py-2">
+                Products
+            </a>
+            <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-56 py-2 text-white">
+                <li><a href="digital_products.html" class="block px-4 py-2">Digital Products</a></li>
+                <li><a href="physical_products.html" class="block px-4 py-2">Physical Products</a></li>
+            </ul>
+          </li>
+        <li><a href="contact.html" class="hover:text-gray-300 font-bold">Contact Us</a></li>
+    </ul>      
+
+      <!-- Hamburger Menu (Mobile) -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none text-white">
+          <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-sky-900">
+        <ul class="flex flex-col items-left ml-5 space-y-4 py-4">
+            <!-- Regular menu items -->
+            <li><a href="index.html" class="hover:text-gray-300 font-bold">Home</a></li>
+            <li><a href="services.html" class="hover:text-gray-300 font-bold">Services</a></li>
+            <li><a href="about.html" class="hover:text-gray-300 font-bold">About Us</a></li>
+            <li><a href="team.html" class="hover:text-gray-300 font-bold">Meet the Teams</a></li>
+            <li><a href="mindset.html" class="hover:text-gray-300 font-bold">Mindset</a></li>
+    
+            <!-- Dropdown -->
+            <li class="relative">
+                <a href="#" class="hover:text-gray-300 font-bold" id="startYourBusinessMobile">Start Your Business</a>
+                <ul id="startYourBusinessDropdownMobile" class="flex flex-col bg-sky-900 w-48 py-2 text-white hidden">
+                    <li><a href="start_a_business.html" class="block px-4 py-2 hide-on-show-more">Startup Roadmap</a></li>
+                    <li><a href="solution.html" class="block px-4 py-2 hide-on-show-more">Itechteam Solution</a></li>
+                    <li><a href="start_your_business.html" class="block px-4 py-2 hide-on-show-more">Start Your Business</a></li>
+                    <li><a href="start_your_company.html" class="block px-4 py-2 hide-on-show-more">Start Your Company</a></li>
+                    <li><a href="#" class="px-4 py-2 font-bold" id="showAdditionalNavMobile">Show More</a></li>
+                </ul>
+            </li>            
+    
+            <!-- Additional items initially hidden -->
+            <li class="hidden additional-nav-items">
+                <a href="manage_business.html" class="block px-4 py-2">Manage Your Business</a>
+            </li>
+            <li class="hidden additional-nav-items relative group">
+                <a href="#" class="block px-4 py-2">Fast Services</a>
+                <ul class="hidden absolute left-0 top-full mt-2 w-56 bg-sky-900 shadow-lg group-hover:block z-10">
+                    <li><a href="2weeks_service.html" class="block px-4 py-2">2-weeks services or less</a></li>
+                    <li><a href="1month_service.html" class="block px-4 py-2">1 month service or less</a></li>
+                    <li><a href="2month_service.html" class="block px-4 py-2">2 Months Services or More</a></li>
+                </ul>
+            </li>
+            <li class="hidden additional-nav-items relative group">
+              <a href="#" class="block px-4 py-2">
+                  Products
+              </a>
+              <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-sky-900 shadow-lg w-56 py-2 text-white">
+                  <li><a href="digital_products.html" class="block px-4 py-2">Digital Products</a></li>
+                  <li><a href="physical_products.html" class="block px-4 py-2">Physical Products</a></li>
+              </ul>
+            </li>
+          <li><a href="contact.html" class="hover:text-gray-300 font-bold">Contact Us</a></li>
+        </ul>
+    </div>    
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center bg-no-repeat h-[500px] sm:h-[500px] md:h-[600px]" style="background-image: url('image/Rectangle\ 62.png');">
+    <div class="absolute inset-0 bg-sky-900 bg-opacity-50 flex items-center justify-center">
+        <div class="text-left px-4">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white">
+              Hire Us
+            </h1>
+        </div>
+    </div>
+  </section>
+
+  <section class="py-12 px-4 lg:px-20 bg-white">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <!-- Left Section -->
+      <div>
+        <h2 class="text-xl font-bold text-sky-900">Contacts</h2>
+        <a href="mailto:itechteamservices@gmail.com">
+            <p class="text-3xl font-bold text-gray-800 break-words">
+              itechteamservices@gmail.com
+            </p>
+        </a>          
+        <p class="text-black text-xl mt-12 font-semibold leading-7">
+          Experience our measured and fast services, designed to meet your unique needs with precision and speed.
+          Our Business-oriented and Software development team is here to help your business thrive. With experienced
+          Project managers who truly care about your success, we deliver tailored solutions for frontend, backend,
+          database, and server needs across mobile apps, web applications, and desktop software. Plus, our comprehensive
+          services include digital marketing, human resource management, business development, data analysis, and more.
+        </p>
+      </div>
+  
+      <!-- Right Section -->
+      <div>
+        <h2 class="text-xl font-bold text-sky-900">Hire us</h2>
+        <h3 class="text-4xl font-bold text-gray-900 mt-2">
+          A PROJECT WITH <span class="text-sky-900">ITECHTEAM?</span>
+        </h3>
+  
+        <!-- Measured Services -->
+        <h4 class="text-xl font-bold text-sky-900 mt-6">Measured services</h4>
+        <div id="service-list" class="flex flex-wrap gap-4 mt-2">
+            <!-- Selected services will be displayed here -->
+        </div>
+
+        <!-- Hidden Input Field for Services -->
+        <input type="hidden" id="services" value="[]" />
+
+        <!-- Hidden template for a service button -->
+          <template id="service-template">
+            <div class="relative group">
+                <button class="bg-sky-900 text-white px-4 py-2 rounded-2xl text-md font-bold h-12 group-hover:px-5 group-hover:py-3 transition-all duration-200">
+                    <span class="service-name"></span>
+                    <span class="absolute top-0 right-0 p-1 text-white text-lg cursor-pointer opacity-0 group-hover:opacity-100 group-hover:text-2xl transition-all duration-200" onclick="removeButton(this)">
+                        &times;
+                    </span>
+                </button>
+            </div>
+          </template>
+
+  
+        <!-- Budget Options -->
+        <h4 class="text-xl font-bold text-sky-900 mt-6">Your budget (&#8358;)</h4>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2" id="budget-naira">
+            <button id="budget-50k-100k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#8358;50k - &#8358;100k</button>
+
+            <button id="budget-100k-150k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#8358;100k - &#8358;150k</button>
+            
+            <button id="budget-150k-200k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#8358;150k - &#8358;200k</button>
+
+            <button id="budget-200k-250k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#8358;200k - &#8358;250k</button>
+
+            <button id="budget-250k-300k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#8358;250k - &#8358;300k</button>
+
+            <button id="budget-300k-500k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#8358;300k - &#8358;500k</button>
+
+            <button id="budget-500k-1m" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#8358;500k - &#8358;1m</button>
+
+            <button id="budget-1m-2m" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#8358;1m - &#8358;2m</button>
+
+            <button id="budget-2m-3m" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#8358;2m - &#8358;3m</button>
+
+            <button id="budget-3m-4m" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#8358;3m - &#8358;4m</button>
+
+            <button id="budget-4k-5m" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#8358;4m - &#8358;5m</button>
+
+            <button id="budget-5m-10m" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#8358;5m - &#8358;10m</button>
+          </div>
+
+        <h4 class="text-xl font-bold text-sky-900 mt-6">Your budget (&#36;)</h4>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2" id="budget-dollar">
+            <button id="budget-1k-5k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#36;1k - &#36;5k</button>
+
+            <button id="budget-5k-10k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#36;5k - &#36;10k</button>
+            
+            <button id="budget-10k-15k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#36;10k - &#36;15k</button>
+
+            <button id="budget-15k-20k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#36;15k - &#36;20k</button>
+
+            <button id="budget-20k-30k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#36;20k - &#36;30k</button>
+
+            <button id="budget-30k-40k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#36;30k - &#36;40k</button>
+
+            <button id="budget-40k-50k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#36;40k - &#36;50k</button>
+
+            <button id="budget-50k-60k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#36;50k - &#36;60k</button>
+
+            <button id="budget-60k-70k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#36;60k - &#36;70k</button>
+
+            <button id="budget-70k-80k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#36;70k - &#36;80k</button>
+
+            <button id="budget-80k-90k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#36;80k - &#36;90k</button>
+
+            <button id="budget-90k-100k" class="border border-gray-300 bg-gray-300 text-gray-500 font-bold px-4 py-2 rounded-2xl text-sm h-12 w-40 hover:bg-sky-900 hover:text-white focus:bg-sky-900 focus:text-white transition duration-300 budget-button">&#36;90k - &#36;100k</button>
+          </div>
+
+        <!-- Form -->
+        <div class="grid grid-cols-1 gap-6 mt-8">
+          <!-- Name -->
+          <div>
+            <label class="block text-xl font-bold text-sky-900 mb-2">Your Name</label>
+            <input
+                id="name"
+                required
+                type="text"
+                placeholder="Your Name"
+                class="w-full border-b border-gray-400 focus:outline-none focus:border-blue-800 p-2"
+            />
+          </div>
+  
+          <!-- Email -->
+          <div>
+            <label class="block text-xl font-bold text-sky-900 mb-2">Your Email</label>
+            <input
+                id="email"
+                required
+                type="email"
+                placeholder="Your Email"
+                class="w-full border-b border-gray-400 focus:outline-none focus:border-blue-800 p-2"
+            />
+          </div>
+  
+          <!-- Service Type -->
+          <div>
+            <label class="block text-xl font-bold text-sky-900 mb-2">Service Type</label>
+            <select
+              class="w-full border-b border-gray-400 focus:outline-none focus:border-sky-900 p-2 font-bold" id="service-type"
+            >
+              <option class="font-semibold">Measured Services</option>
+              <option class="font-semibold">Fast Services</option>
+            </select>
+          </div>
+  
+          <!-- Business Type -->
+          <div>
+            <label class="block text-xl font-bold text-sky-900 mb-2">Business Type</label>
+            <select
+              class="w-full border-b border-gray-400 focus:outline-none focus:border-sky-900 p-2 font-semibold" id="business-type"
+            >
+              <option class="font-semibold">Business Startup</option>
+              <option class="font-semibold">Company Startup</option>
+              <option class="font-semibold">Existing Business</option>
+            </select>
+          </div>
+  
+          <!-- Project Details -->
+          <div>
+            <label class="block text-xl font-bold text-sky-900 mb-2">Project Description/Details</label>
+            <textarea
+              placeholder="Write your project details here..."
+              class="w-full border border-gray-400 rounded-md focus:outline-none focus:border-sky-900 p-3"
+              rows="4"
+              id="project-details"
+            ></textarea>
+          </div>
+        </div>
+  
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 mt-8 items-center justify-center">
+            <a href="subscription.html">
+                  <button class="bg-sky-900 h-12 w-72 text-white px-6 py-2 rounded-xl font-bold">Back</button>
+              </a>
+              <a href="submit.html?origin=hire.html" id="submit-button">
+                <button class="bg-red-500 h-12 w-72 text-white px-6 py-2 rounded-xl font-bold">Submit</button>
+            </a>
+          </div>        
+      </div>
+    </div>
+  </section>  
+
+  <section class="relative bg-cover bg-center py-12 text-white overflow-x-hidden" style="background-image: url('image/world.png');">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-sky-900 opacity-40"></div>
+    
+    <!-- Content -->
+    <div class="relative container mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Logo and Newsletter Section -->
+      <div>
+        <!-- Logo -->
+        <a href="index.html">
+          <div class="mb-8">
+            <img src="image/itechteam logo.png" alt="Logo" class="h-64">
+          </div>
+        </a>
+        <!-- Newsletter -->
+        <h3 class="text-2xl sm:text-xl md:text-2xl lg:text-2xl font-bold mb-4">Subscribe to our newsletter</h3>
+        <form class="space-y-4">
+          <!-- Input Field -->
+          <input
+            type="email"
+            placeholder="yourname@email.com"
+            class="w-full px-4 py-2 rounded-md text-black focus:outline-none"
+          >
+          <!-- Button -->
+          <button
+            type="submit"
+            class="w-full bg-sky-900 px-6 py-3 rounded-md shadow-md text-center font-bold hover:bg-sky-800 transition duration-300"
+          >
+            Subscribe
+          </button>
+        </form>
+        <!-- Social Media Icons -->
+        <div class="flex gap-4 mt-8">
+          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+            <img src="image/facebook logo.png" alt="Facebook" class="h-6 w-6">
+          </a>
+          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+            <img src="image/instagram logo.png" alt="Instagram" class="h-6 w-6">
+          </a>
+          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+            <img src="image/twitter logo.png" alt="Twitter" class="h-6 w-6">
+          </a>
+        </div>
+      </div>
+  
+      <!-- Quick Links Section -->
+      <div class="mt-8 md:mt-32 md:ml-24 lg:ml-36">
+        <h3 class="text-2xl sm:text-xl md:text-3xl font-bold mb-6 whitespace-nowrap">Quick Links</h3>
+        <ul class="space-y-2 md:space-y-4 text-xl md:text-2xl lg:text-2xl">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="services.html" class="hover:underline">Service</a></li>
+          <li><a href="about.html" class="hover:underline">About Us</a></li>
+          <li><a href="team.html" class="hover:underline">Meet the Team</a></li>
+          <li><a href="mindset.html" class="hover:underline">Mindset</a></li>
+          <li><a href="start_a_business.html" class="hover:underline">Start a Business</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Fast Services Section -->
+      <div class="mt-8 md:mt-32 md:ml-16 lg:ml-32">
+        <h3 class="text-2xl sm:text-xl md:text-3xl font-bold mb-6 whitespace-nowrap">Fast Services</h3>
+        <ul class="space-y-2 md:space-y-4 text-xl md:text-2xl lg:text-2xl">
+          <li><a href="1month_service.html" class="hover:underline">1 Month services or less</a></li>
+          <li><a href="2weeks_service.html" class="hover:underline">2 Weeks services or less</a></li>
+          <li><a href="2month_service.html" class="hover:underline">2 Months services or more</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- JavaScript -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    function toggleCheckbox(id) {
+        const checkbox = document.getElementById(id);
+        const circle = checkbox.querySelector('circle');
+
+        if (checkbox.classList.contains('checked')) {
+            // Uncheck
+            checkbox.classList.remove('checked');
+            circle.classList.remove('fill-sky-900'); // Remove the filled background
+            circle.classList.add('fill-white'); // Add the white background
+        } else {
+            // Check
+            checkbox.classList.add('checked');
+            circle.classList.remove('fill-white'); // Remove the white background
+            circle.classList.add('fill-sky-900'); // Add the filled background
+        }
+    }
+
+    // Function for desktop "Show More" button
+    document.getElementById('showAdditionalNavDesktop').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Button for toggling Show More / Show Less
+        const button = event.target;
+        const isShowingMore = button.textContent.trim() === "Show More";
+
+        // Regular menu items to hide
+        const desktopItemsToHide = document.querySelectorAll('.hide-on-show-more-desktop');
+        const additionalNavItemsDesktop = document.querySelectorAll('.additional-nav-items');
+
+        if (isShowingMore) {
+            // Hide regular menu items
+            desktopItemsToHide.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Show additional items
+            additionalNavItemsDesktop.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Update button text to "Show Less"
+            button.textContent = "Show Less";
+        } else {
+            // Restore the regular menu items
+            desktopItemsToHide.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Hide additional items
+            additionalNavItemsDesktop.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Update button text back to "Show More"
+            button.textContent = "Show More";
+        }
+    });
+
+
+   // Toggle "Start Your Business" dropdown on mobile
+    document.getElementById('startYourBusinessMobile').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Find the dropdown under "Start Your Business"
+        const dropdown = document.getElementById('startYourBusinessDropdownMobile');
+
+        // Toggle dropdown visibility
+        dropdown.classList.toggle('hidden');
+    });
+
+
+    // Mobile "Show More" / "Show Less" toggle functionality
+    document.getElementById('showAdditionalNavMobile').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Get the button and toggle its state
+        const button = event.target;
+        const isShowingMore = button.textContent.trim() === "Show More";
+
+        // Items to hide or show (hide-on-show-more and additional-nav-items)
+        const mobileItemsToHide = document.querySelectorAll('.hide-on-show-more');
+        const additionalNavItemsMobile = document.querySelectorAll('.additional-nav-items');
+
+        if (isShowingMore) {
+            // Hide dropdown items in "Start Your Business"
+            mobileItemsToHide.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Show additional items
+            additionalNavItemsMobile.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Change button text to "Show Less"
+            button.textContent = "Show Less";
+        } else {
+            // Restore the original dropdown items
+            mobileItemsToHide.forEach(function (item) {
+                item.classList.remove('hidden'); // Remove Tailwind's 'hidden' class
+            });
+
+            // Hide additional items
+            additionalNavItemsMobile.forEach(function (item) {
+                item.classList.add('hidden'); // Add Tailwind's 'hidden' class
+            });
+
+            // Change button text to "Show More"
+            button.textContent = "Show More";
+        }
+    });
+
+    function removeButton(button) {
+        button.parentElement.remove();
+    }
+
+    function toggleCheckbox(id) {
+        const checkbox = document.getElementById(id);
+        const circle = checkbox.querySelector('circle');
+
+        if (checkbox.classList.contains('checked')) {
+            // Uncheck
+            checkbox.classList.remove('checked');
+            circle.classList.remove('fill-sky-900'); // Remove the filled background
+            circle.classList.add('fill-white'); // Add the white background
+        } else {
+            // Check
+            checkbox.classList.add('checked');
+            circle.classList.remove('fill-white'); // Remove the white background
+            circle.classList.add('fill-sky-900'); // Add the filled background
+        }
+    }
+
+    window.onload = function () {
+    // Get the selected services from localStorage
+    const selectedServices = JSON.parse(localStorage.getItem('selectedServices')) || [];
+    console.log('Selected Services:', selectedServices);
+
+    // Get the service list container, template, and hidden input
+    const serviceList = document.getElementById('service-list');
+    const template = document.getElementById('service-template');
+    const servicesInput = document.getElementById('services');
+
+    if (!servicesInput) {
+      console.error('Hidden input for services not found.');
+      return;
+    }
+
+    // Clear the service list
+    serviceList.innerHTML = '';
+
+    if (selectedServices.length > 0) {
+      selectedServices.forEach((service) => {
+        // Clone the template content
+        const serviceElement = template.content.cloneNode(true);
+
+        // Set the service name
+        const serviceNameSpan = serviceElement.querySelector('.service-name');
+        if (serviceNameSpan) {
+          serviceNameSpan.textContent = service;
+        }
+
+        // Append the cloned template to the service list
+        serviceList.appendChild(serviceElement);
+      });
+
+      // Populate the hidden input with selected services
+      servicesInput.value = JSON.stringify(selectedServices);
+    } else {
+      // If no services are selected, show a placeholder
+      serviceList.innerHTML = '<p>No services selected.</p>';
+      servicesInput.value = JSON.stringify([]); // Reset the hidden input
+    }
+  };
+
+  function removeButton(button) {
+    // Find the parent element and remove it
+    const buttonContainer = button.closest('.relative');
+    if (!buttonContainer) return;
+    buttonContainer.remove();
+
+    // Update localStorage to reflect the change
+    let services = JSON.parse(localStorage.getItem('selectedServices')) || [];
+    const serviceName = buttonContainer.querySelector('.service-name').textContent;
+    services = services.filter(service => service !== serviceName);
+    localStorage.setItem('selectedServices', JSON.stringify(services));
+
+    // Update the hidden input field
+    const servicesInput = document.getElementById('services');
+    if (servicesInput) {
+      servicesInput.value = JSON.stringify(services);
+    }
+
+    console.log('Updated Services:', services);
+  }
+
+    // Store selected budget
+    let selectedBudgetText = null;
+
+    // Event listeners for budget buttons
+    document.querySelectorAll('.budget-button').forEach((button) => {
+      button.addEventListener('click', (event) => {
+          event.preventDefault();
+
+          // Remove 'selected' classes from all buttons
+          document.querySelectorAll('.budget-button').forEach((btn) => {
+              btn.classList.remove('bg-sky-900', 'text-white', 'focus:bg-sky-900', 'focus:text-white');
+          });
+
+          // Add 'selected' classes to the clicked button
+          event.target.classList.add('bg-sky-900', 'text-white', 'focus:bg-sky-900', 'focus:text-white');
+
+          // Set the selected budget text
+          selectedBudgetText = event.target.textContent.trim(); // Trim to remove extra spaces
+          console.log('Selected Budget Text:', selectedBudgetText);
+      });
+    });
+
+  // Form submission logic
+  document.getElementById('submit-button').addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    // Get form inputs
+    const name = document.getElementById('name')?.value;
+    const email = document.getElementById('email')?.value;
+    const serviceType = document.getElementById('service-type')?.value;
+    const businessType = document.getElementById('business-type')?.value;
+    const projectDescription = document.getElementById('project-details')?.value;
+    const servicesInput = document.getElementById('services');
+
+    const services = servicesInput ? JSON.parse(servicesInput.value || '[]') : [];
+
+    // Prepare the form data
+    const formData = {
+      name,
+      email,
+      serviceType,
+      businessType,
+      projectDescription,
+      budgetNGN: selectedBudgetText && selectedBudgetText.includes('₦') ? selectedBudgetText : null,
+      budgetUSD: selectedBudgetText && selectedBudgetText.includes('$') ? selectedBudgetText : null,
+      services, // Add services to the form data
+    };
+
+    console.log('Form Data:', formData);
+
+    // Validate required fields
+    if (!name || !email || !serviceType || !businessType || !projectDescription || (!formData.budgetNGN && !formData.budgetUSD) || services.length === 0) {
+      alert('All fields are required, including selected services.');
+      return;
+    }
+
+    try {
+      // Send the form data to the server
+      const response = await fetch('http://localhost:3000/hire', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Redirect to submit.html
+        window.location.href = 'submit.html?origin=hire.html';
+      } else {
+        const errorResponse = await response.json();
+        console.error('Error response:', errorResponse);
+        alert(`Error: ${errorResponse.error}`);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Error submitting form.');
+    }
+  });
+  </script>
+
+</body>
+</html>

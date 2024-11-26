@@ -52,3 +52,12 @@ node_modules/
 # Build directories
 dist/
 build/
+
+# Ignore everything in the public folder except HTML and image files
+/public/*
+!/public/**/*.html
+!/public/**/*.{png,jpg,jpeg,gif,svg,webp}
+
+# Allow the Node.js app files
+!*.js
+!*.json

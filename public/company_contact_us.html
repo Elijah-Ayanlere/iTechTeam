@@ -6,11 +6,25 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>iTech Team</title>
   <link rel="icon" href="image/submarklogo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    .font-noto {
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .font-nunito {
+      font-family: 'Nunito', sans-serif;
+    }
+    .font-poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
-<body class="antialiased bg-gray-100">
+<body class="font-poppins">
 
   <!-- Navigation -->
-  <nav class="bg-sky-900 text-white static">
+  <nav class="bg-sky-900 text-white static text-sm">
     <div class="container mx-auto flex items-center justify-between py-4 px-6">
       <!-- Logo Section -->
       <a href="index.html">
@@ -155,15 +169,18 @@
 
         <h2 class="text-xl font-bold text-sky-900 mt-12">Follow Us</h2>
         <div class="flex gap-4 mt-8">
-            <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
-              <img src="image/facebook logo.png" alt="Facebook" class="h-6 w-6">
-            </a>
-            <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
-              <img src="image/instagram logo.png" alt="Instagram" class="h-6 w-6">
-            </a>
-            <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
-              <img src="image/twitter logo.png" alt="Twitter" class="h-6 w-6">
-            </a>
+          <a href="#" class="bg-black p-3 rounded-full">
+            <img src="image/facebook logo.png" alt="Facebook" class="h-6 w-6">
+          </a>
+          <a href="#" class="bg-black p-3 rounded-full">
+            <img src="image/instagram logo.png" alt="Instagram" class="h-6 w-6">
+          </a>
+          <a href="#" class="bg-black p-3 rounded-full">
+            <img src="image/twitter logo.png" alt="Twitter" class="h-6 w-6">
+          </a>
+          <a href="#" class="bg-black p-3 rounded-full">
+            <img src="image/linkedin.jpeg" alt="Twitter" class="h-6 w-6">
+          </a>
         </div>
 
         <h2 class="text-xl font-bold text-sky-900 mt-16">Want a Quick Chat?</h2>
@@ -356,14 +373,17 @@
         </form>
         <!-- Social Media Icons -->
         <div class="flex gap-4 mt-8">
-          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+          <a href="#" class="bg-black p-3 rounded-full">
             <img src="image/facebook logo.png" alt="Facebook" class="h-6 w-6">
           </a>
-          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+          <a href="#" class="bg-black p-3 rounded-full">
             <img src="image/instagram logo.png" alt="Instagram" class="h-6 w-6">
           </a>
-          <a href="#" class="bg-black p-3 rounded-full hover:bg-gray-700">
+          <a href="#" class="bg-black p-3 rounded-full">
             <img src="image/twitter logo.png" alt="Twitter" class="h-6 w-6">
+          </a>
+          <a href="#" class="bg-black p-3 rounded-full">
+            <img src="image/linkedin.jpeg" alt="Twitter" class="h-6 w-6">
           </a>
         </div>
       </div>
@@ -624,7 +644,7 @@
 
             try {
                 // Submit the form data via a POST request
-                const response = await fetch('/send-company-email', {
+                const response = await fetch('/api/company', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

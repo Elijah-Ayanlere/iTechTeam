@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Dev Elijah",
+    "email": "elijahayanlere3@gmail.com",
+    "serviceType": "Measured Services",
+    "businessType": "Business Startup",
+    "projectDescription": "I want to start my business, I've selected it already.\n\nAwaiting your feedback with mybusiness details.",
+    "budgetNGN": "₦4m - ₦5m",
+    "budgetUSD": null,
+    "services": [
+      "Quality Assurance",
+      "Artificial Intelligence",
+      "Digital Marketing"
+    ],
+    "createdAt": "2024-11-29T11:28:19.761Z"
+  },
+  {
+    "name": "Dev Elijah",
+    "email": "elijahayanlere3@gmail.com",
+    "serviceType": "Measured Services",
+    "businessType": "Business Startup",
+    "projectDescription": "Testing",
+    "budgetNGN": null,
+    "budgetUSD": "$80k - $90k",
+    "services": [
+      "Quality Assurance",
+      "Artificial Intelligence",
+      "Creative Content Management"
+    ],
+    "createdAt": "2024-11-30T11:17:10.680Z"
+  }
+]

@@ -6,9 +6,9 @@ const fs = require('fs');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
-// File paths for storing hire requests, testimonials, and business contacts
+// File paths for storing hire requests, testimonials, and contacts
 const hireRequestsFilePath = path.join(__dirname, 'hireRequests.json');
 const testimonialsFilePath = path.join(__dirname, 'testimonials.json');
 const businessContactFilePath = path.join(__dirname, 'businessContacts.json');
@@ -17,8 +17,19 @@ const mainContactFilePath = path.join(__dirname, 'mainContacts.json');
 
 // Middleware
 app.use(cors());
-app.use(bodyParser.json());  // Middleware to parse JSON data
-app.use(express.static(path.join(__dirname, 'public')));  // Serve static files from 'public' folder
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Middleware to detect ad blocker
+app.use((req, res, next) => {
+  const adBlockHeader = req.headers['x-adblock-detected'];
+  if (adBlockHeader === 'true') {
+    return res.status(403).json({
+      error: 'Request blocked by ad blocker. Please disable your ad blocker to continue.',
+    });
+  }
+  next();
+});
 
 // Utility functions for reading and writing JSON data to files
 const readHireRequests = () => {
@@ -34,6 +45,7 @@ const writeHireRequests = (requests) => {
   fs.writeFileSync(hireRequestsFilePath, JSON.stringify(requests, null, 2));
 };
 
+// Additional utility functions (testimonials, business contacts, etc.)
 const readTestimonials = () => {
   try {
     const data = fs.readFileSync(testimonialsFilePath, 'utf8');
@@ -47,7 +59,6 @@ const writeTestimonials = (testimonials) => {
   fs.writeFileSync(testimonialsFilePath, JSON.stringify(testimonials, null, 2));
 };
 
-// Utility functions for reading and writing business contacts
 const readBusinessContacts = () => {
   try {
     const data = fs.readFileSync(businessContactFilePath, 'utf8');
@@ -61,7 +72,6 @@ const writeBusinessContacts = (contacts) => {
   fs.writeFileSync(businessContactFilePath, JSON.stringify(contacts, null, 2));
 };
 
-// Utility functions for reading and writing company contacts
 const readCompanyContacts = () => {
   try {
     const data = fs.readFileSync(companyContactFilePath, 'utf8');
@@ -75,7 +85,6 @@ const writeCompanyContacts = (contacts) => {
   fs.writeFileSync(companyContactFilePath, JSON.stringify(contacts, null, 2));
 };
 
-// Utility functions for reading and writing maincontacts
 const readMainContacts = () => {
   try {
     const data = fs.readFileSync(mainContactFilePath, 'utf8');
@@ -89,9 +98,9 @@ const writeMainContacts = (contacts) => {
   fs.writeFileSync(mainContactFilePath, JSON.stringify(contacts, null, 2));
 };
 
-// POST endpoint to handle hire requests
-app.post('/hire', (req, res) => {
-  console.log('Request body:', req.body); // Log the request data to debug
+// POST endpoint to handle hire requests (updated)
+app.post('/api/hire', (req, res) => {
+  console.log('Request body:', req.body); // Log the request data for debugging
 
   const {
     name,
@@ -104,7 +113,7 @@ app.post('/hire', (req, res) => {
     services,
   } = req.body;
 
-  // Check all required fields
+  // Validate all required fields
   if (!name || !email || !serviceType || !businessType || !projectDescription || (!budgetNGN && !budgetUSD) || !services || services.length === 0) {
     return res.status(400).json({ error: 'All fields are required, including selected services.' });
   }
@@ -125,6 +134,7 @@ app.post('/hire', (req, res) => {
   hireRequests.push(hireRequest);
   writeHireRequests(hireRequests);
 
+  // Email configuration
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -138,16 +148,16 @@ app.post('/hire', (req, res) => {
     to: email,
     subject: `New Hire Request: ${name}`,
     text: `
-      You have received a new hire request from measured services.
+      You have received a new hire request.
 
       Name: ${name}
       Email: ${email}
-      Measured Services Selected: ${services}
+      Services Selected: ${services.join(', ')}
       Service Type: ${serviceType}
       Business Type: ${businessType}
       Project Description: ${projectDescription}
-      Budget (NGN): ${budgetNGN ? budgetNGN : 'Not provided'}
-      Budget (USD): ${budgetUSD ? budgetUSD : 'Not provided'}
+      Budget (NGN): ${budgetNGN || 'Not provided'}
+      Budget (USD): ${budgetUSD || 'Not provided'}
       Request received at: ${new Date().toLocaleString()}
     `,
   };
@@ -165,7 +175,7 @@ app.post('/hire', (req, res) => {
 });
 
 // POST endpoint to handle business contact messages
-app.post('/send-business-email', (req, res) => {
+app.post('/api/business', (req, res) => {
   console.log('Request body:', req.body); // Log the request data to debug
 
   const {
@@ -238,7 +248,7 @@ app.post('/send-business-email', (req, res) => {
 });
 
 // POST endpoint to handle company contact messages
-app.post('/send-company-email', (req, res) => {
+app.post('/api/company', (req, res) => {
   console.log('Request body:', req.body); // Log the request data to debug
 
   const {
@@ -311,7 +321,7 @@ app.post('/send-company-email', (req, res) => {
 });
 
 // POST endpoint to handle company contact messages
-app.post('/send-contact-email', (req, res) => {
+app.post('/api/contact', (req, res) => {
   console.log('Request body:', req.body); // Log the request data to debug
 
   const {

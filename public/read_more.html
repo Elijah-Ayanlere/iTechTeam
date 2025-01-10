@@ -22,8 +22,6 @@
   </style>
 </head>
 <body class="font-poppins">
-</head>
-<body>
 
   <!-- Navigation -->
   <nav class="bg-sky-900 text-white static text-sm">
@@ -140,129 +138,60 @@
     </div>    
   </nav>
 
-  <div class="container mx-auto p-4">
-    <div class="container mx-auto mt-10 flex flex-col md:flex-row items-center justify-center gap-8">
-      <!-- Image Section -->
-      <div class="bg-white rounded-lg p-4 flex-shrink-0 flex items-center justify-center">
-          <img 
-              alt="Product preview" 
-              class="rounded-lg object-cover" 
-              id="productImage" 
-              style="height: 300px; width: auto;" 
-          />
-      </div>
-  
-      <!-- Text Section -->
-      <div class="flex flex-col text-left bg-white rounded-lg p-6 md:p-8 shadow-lg">
-          <h1 class="text-3xl lg:text-4xl font-bold mb-4" id="productTitle"></h1>
-          <ul class="text-left mb-4 space-y-2">
-              <li id="productTxt1" class="text-xl font-semibold text-gray-600"></li>
-              <li id="productTxt2" class="text-xl font-semibold text-gray-600"></li>
-              <li id="productTxt3" class="text-xl font-semibold text-gray-600"></li>
-          </ul>
-          <p class="text-2xl font-bold text-black mt-4">
-              &#8358;<span class="text-4xl font-bold text-red-500" id="productPriceNaira"></span>
-          </p>
-          <p class="text-2xl font-bold text-black mt-2">
-              $<span class="text-4xl font-bold text-red-500" id="productPriceDollar"></span>
-          </p>
-      </div>
-  </div> 
-            
-    </div>
-    <div class="flex justify-center mt-16 mb-12 h-auto">
-          <div class="bg-gray-100 p-8 rounded-lg shadow-lg w-full max-w-6xl">
-              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                  <div class="flex justify-center mb-12 h-auto">
-                      <div class="pr-4 md:border-r md:border-sky-900">
-                          <h2 class="text-3xl font-bold mb-4">Automatic Payment</h2>
-                          <form>
-                              <div class="mb-4 mt-8">
-                                  <label class="block text-sky-900 font-bold">Full Name</label>
-                                  <input 
-                                      class="w-full bg-gray-100 mt-2 border-b border-gray-400 focus:outline-none focus:border-blue-800 p-2" 
-                                      type="text" 
-                                      placeholder="Full Name" 
-                                  />
-                              </div>
-                              <div class="mb-4">
-                                  <label class="block text-sky-900 font-bold">Card Details</label>
-                                  <input 
-                                      class="w-full bg-gray-100 mt-2 border-b border-gray-400 focus:outline-none focus:border-blue-800 p-2" 
-                                      type="text" 
-                                      placeholder="Card number"
-                                      id="cardNumber" 
-                                  />
-                              </div>
-                              <div class="mb-4 flex space-x-4">
-                                  <input 
-                                      class="w-full bg-gray-100 mt-2 border-b border-gray-400 focus:outline-none focus:border-blue-800 p-2" 
-                                      placeholder="MM/YY" 
-                                      type="text" 
-                                      id="expiryDate" 
-                                  />
-                                  <input 
-                                      class="w-full bg-gray-100 mt-2 border-b border-gray-400 focus:outline-none focus:border-blue-800 p-2" 
-                                      placeholder="CVV" 
-                                      type="text" 
-                                      id="cvv" 
-                                  />
-                              </div>
-                              <div class="flex flex-col gap-4 mt-8 items-center">
-                                  <a href="#">
-                                      <button class="bg-sky-900 h-12 w-64 max-w-sm text-white px-6 py-2 rounded-xl font-bold">
-                                          Buy Now
-                                      </button>
-                                  </a>
-                                  <a href="#">
-                                      <button class="bg-red-500 h-12 w-64 max-w-sm text-white px-6 py-2 rounded-xl font-bold">
-                                          Send a Message
-                                      </button>
-                                  </a>
-                              </div>
-                          </form>
-                      </div>
-                  </div>
-          
-                  <!-- <div class="pr-4 md:border-r md:border-sky-900">
-                      <h2 class="text-3xl mt-4 lg:mt-auto font-bold mb-4">Manual Payment</h2>
-                      <h3 class="text-2xl mt-2 lg:mt-auto font-bold mb-4">Naira Account</h3>
-                      <p class="mb-2 text-lg lg:text-xl"><strong>Naira Bank Account Number</strong></p>
-                      <p class="text-2xl lg:text-3xl font-bold mb-4">5123654793</p>
-                      <p class="mb-2 text-lg lg:text-xl"><strong>Naira Bank Account Name</strong></p>
-                      <p class="text-2xl lg:text-3xl font-bold mb-4">Itechteam</p>
-                      <p class="mb-2 text-lg lg:text-xl"><strong>Naira Bank Name</strong></p>
-                      <p class="text-2xl lg:text-3xl font-bold mb-4">Gauranty Trust Bank (GTB)</p>
-                      <button class="bg-red-500 h-12 w-full sm:w-50 max-w-sm text-white px-6 py-2 rounded-xl font-bold">
-                          Payment Successful
-                      </button>                        
-                      <p class="text-gray-500 mt-4">
-                          Click the button above after a successful transfer.
-                      </p>
-                  </div> -->
-          
-                  <!-- <div>
-                      <h2 class="text-3xl mt-4 lg:mt-auto font-bold mb-4">Manual Payment</h2>
-                      <h3 class="text-2xl mt-2 lg:mt-auto font-bold mb-4">Dollar Account</h3>
-                      <p class="mb-2 text-lg lg:text-xl"><strong>Dollar Bank Account Number</strong></p>
-                      <p class="text-2xl lg:text-3xl font-bold mb-4">1234567890</p>
-                      <p class="mb-2 text-lg lg:text-xl"><strong>Dollar Bank Account Name</strong></p>
-                      <p class="text-2xl lg:text-3xl font-bold mb-4">Itechteam</p>
-                      <p class="mb-2 text-lg lg:text-xl"><strong>Swift Code</strong></p>
-                      <p class="text-2xl lg:text-3xl font-bold mb-4">JCJSHEGKSL</p>
-                      <p class="mb-2 text-lg lg:text-xl"><strong>Dollar Bank Name</strong></p>
-                      <p class="text-2xl lg:text-3xl font-bold mb-4">Wall Fargo's</p>
-                      <button class="bg-red-500 h-12 w-full sm:w-50 max-w-sm text-white px-6 py-2 rounded-xl font-bold">
-                          Payment Successful
-                      </button>                        
-                      <p class="text-gray-500 mt-4">
-                          Click the button above after a successful transfer.
-                      </p>
-                </div> -->
-              </div>
-          </div>            
+  <!-- Page Content -->
+  <div class="container mx-auto mt-8 px-4 lg:px-0">
+    <h1 class="text-4xl font-bold text-sky-900 text-center mb-6">Video Editing Pricing</h1>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Pricing Card: Basic Editing -->
+        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+            <img src="image/basic editing.webp" alt="Basic Editing" class="rounded-t-lg w-full h-40 object-cover mb-4">
+            <h3 class="text-xl font-semibold text-sky-900">Basic Editing</h3>
+            <p class="text-gray-700 mt-2">Includes reels, TikToks, and social media clips.</p>
+            <p class="text-black font-bold mt-4">Nigeria: ₦40,000</p>
+            <p class="text-black font-bold">International: $150</p>
+            <button onclick="selectPackage('Basic Editing', '40,000', '150', 'image/basic editing.webp')" class="mt-6 w-full bg-sky-900 text-white py-2 rounded-lg font-semibold">Select</button>
+        </div>
+    
+        <!-- Pricing Card: Intermediate Editing -->
+        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+            <img src="image/intermediate video editing.webp" alt="Intermediate Editing" class="rounded-t-lg w-full h-40 object-cover mb-4">
+            <h3 class="text-xl font-semibold text-sky-900">Intermediate Editing</h3>
+            <p class="text-gray-700 mt-2">For YouTube and corporate videos.</p>
+            <p class="text-black font-bold mt-4">Nigeria: ₦120,000</p>
+            <p class="text-black font-bold">International: $450</p>
+            <button onclick="selectPackage('Intermediate Editing', '120,000', '450', 'image/intermediate video editing.webp')" class="mt-6 w-full bg-sky-900 text-white py-2 rounded-lg font-semibold">Select</button>
+        </div>
+    
+        <!-- Pricing Card: Advanced Editing -->
+        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+            <img src="image/advanced-video-editing.webp" alt="Advanced Editing" class="rounded-t-lg w-full h-40 object-cover mb-4">
+            <h3 class="text-xl font-semibold text-sky-900">Advanced Editing</h3>
+            <p class="text-gray-700 mt-2">Custom animations and motion graphics.</p>
+            <p class="text-black font-bold mt-4">Nigeria: ₦250,000</p>
+            <p class="text-black font-bold">International: $1,200</p>
+            <button onclick="selectPackage('Advanced Editing', '250,000', '1,200', 'image/advanced-video-editing.webp')" class="mt-6 w-full bg-sky-900 text-white py-2 rounded-lg font-semibold">Select</button>
+        </div>
     </div>    
-   </div>
+
+        <!-- Add-ons Section -->
+        <div class="mt-16 bg-gray-50 p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-sky-900 mb-4">Add-ons</h2>
+            <ul class="text-gray-700 space-y-4">
+                <li><span class="font-semibold">Rush Service:</span> +20% of base price</li>
+                <li><span class="font-semibold">Extra Revisions:</span> +10% of base price per revision</li>
+                <li><span class="font-semibold">Custom Branding:</span> +₦20,000 / $50</li>
+            </ul>
+        </div>
+
+        <!-- Subscription Section -->
+        <div class="mt-8 bg-gray-50 p-8 rounded-lg shadow-lg mb-8">
+            <h2 class="text-2xl font-bold text-sky-900 mb-4">Subscription Packages</h2>
+            <p class="text-gray-700">
+                Discounts available for businesses who use our services more than twice. Contact us for details.
+            </p>
+        </div>
+    </div>
 
   <section class="relative bg-cover bg-center py-12 text-white overflow-x-hidden" style="background-image: url('image/world.png');">
     <!-- Overlay -->
@@ -274,10 +203,10 @@
       <div>
         <!-- Logo -->
         <a href="index.html">
-          <div class="mb-8">
-            <img src="image/itechteam logo.png" alt="Logo" class="h-64">
-          </div>
-        </a>
+            <div class="mb-8">
+              <img src="image/itechteam logo.png" alt="Logo" class="h-64">
+            </div>
+          </a>
         <!-- Newsletter -->
         <h3 class="text-2xl sm:text-xl md:text-2xl lg:text-2xl font-bold mb-4">Subscribe to our newsletter</h3>
         <form class="space-y-4">
@@ -297,19 +226,19 @@
         </form>
         <!-- Social Media Icons -->
         <div class="flex gap-4 mt-8">
-          <a href="#" class="bg-black p-3 rounded-full">
-            <img src="image/facebook logo.png" alt="Facebook" class="h-6 w-6">
-          </a>
-          <a href="#" class="bg-black p-3 rounded-full">
-            <img src="image/instagram logo.png" alt="Instagram" class="h-6 w-6">
-          </a>
-          <a href="#" class="bg-black p-3 rounded-full">
-            <img src="image/twitter logo.png" alt="Twitter" class="h-6 w-6">
-          </a>
-          <a href="#" class="bg-black p-3 rounded-full">
-            <img src="image/linkedin.jpeg" alt="Twitter" class="h-6 w-6">
-          </a>
-        </div>
+            <a href="#" class="bg-black p-3 rounded-full">
+              <img src="image/facebook logo.png" alt="Facebook" class="h-6 w-6">
+            </a>
+            <a href="#" class="bg-black p-3 rounded-full">
+              <img src="image/instagram logo.png" alt="Instagram" class="h-6 w-6">
+            </a>
+            <a href="#" class="bg-black p-3 rounded-full">
+              <img src="image/twitter logo.png" alt="Twitter" class="h-6 w-6">
+            </a>
+            <a href="#" class="bg-black p-3 rounded-full">
+              <img src="image/linkedin.jpeg" alt="Twitter" class="h-6 w-6">
+            </a>
+          </div>
       </div>
   
       <!-- Quick Links Section -->
@@ -340,7 +269,6 @@
 
 
   <!-- JavaScript -->
-  <script src="https://js.paystack.co/v1/inline.js"></script>
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -461,39 +389,19 @@
         }
     });
 
-    // Format card number with spaces and limit to 16 digits
-    const cardNumberInput = document.getElementById('cardNumber');
-    cardNumberInput.addEventListener('input', (e) => {
-        let value = e.target.value.replace(/\D/g, ''); // Remove non-digit characters
-        if (value.length > 16) value = value.slice(0, 16); // Limit to 16 digits
-        e.target.value = value.replace(/(\d{4})(?=\d)/g, '$1 '); // Add spaces every 4 digits
-    });
+    // Save selected package to localStorage and redirect to buy_now.html
+    function selectPackage(title, nairaPrice, dollarPrice, imageUrl) {
+            localStorage.setItem('productTitle', title);
+            localStorage.setItem('productPriceNaira', nairaPrice);
+            localStorage.setItem('productPriceDollar', dollarPrice);
+            localStorage.setItem('productImage', imageUrl);
+            localStorage.setItem('productTxt1', 'Selected Package: ' + title);
+            localStorage.setItem('productTxt2', 'Includes all standard services.');
+            localStorage.setItem('productTxt3', 'Additional options available on request.');
 
-    // Auto-add slash for MM/YY and limit to 5 characters
-    const expiryDateInput = document.getElementById('expiryDate');
-    expiryDateInput.addEventListener('input', (e) => {
-        let value = e.target.value.replace(/\D/g, ''); // Remove non-digit characters
-        if (value.length > 4) value = value.slice(0, 4); // Limit to 4 digits
-        if (value.length > 2) value = value.slice(0, 2) + '/' + value.slice(2); // Add slash after MM
-        e.target.value = value;
-    });
-
-    // Limit CVV to 3 digits
-    const cvvInput = document.getElementById('cvv');
-    cvvInput.addEventListener('input', (e) => {
-        let value = e.target.value.replace(/\D/g, ''); // Remove non-digit characters
-        if (value.length > 3) value = value.slice(0, 3); // Limit to 3 digits
-        e.target.value = value;
-    });
-
-    // Retrieve the product details from localStorage and update the page
-    document.getElementById('productTitle').innerHTML = localStorage.getItem('productTitle');
-    document.getElementById('productPriceDollar').innerHTML = localStorage.getItem('productPriceDollar');
-    document.getElementById('productPriceNaira').innerHTML = localStorage.getItem('productPriceNaira');
-    document.getElementById('productImage').src = localStorage.getItem('productImage');
-    document.getElementById('productTxt1').innerHTML = localStorage.getItem('productTxt1');
-    document.getElementById('productTxt2').innerHTML = localStorage.getItem('productTxt2');
-    document.getElementById('productTxt3').innerHTML = localStorage.getItem('productTxt3');
+            // Redirect to Buy Now page
+            window.location.href = "buy_now.html";
+        }
   </script>
 
 </body>
